@@ -19,7 +19,7 @@ const services = [
         <p><strong>Email:</strong> <a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
         <p><strong>Call:</strong> <a href="tel:+12048099114">(204) 809-9114</a></p>
       </div>
-      <a href="/#intake-form" class="btn btn-teal" style="margin-top:1rem;font-size:.72rem;">2 Minute Intake Form</a>
+      <a href={base + "#intake-form"} class="btn btn-teal" style="margin-top:1rem;font-size:.72rem;">2 Minute Intake Form</a>
       <div class="ftr-social">
         <a href="https://www.facebook.com/westendtherapy20/" target="_blank" rel="noopener" aria-label="Facebook">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -32,7 +32,7 @@ const services = [
     <div class="ftr-col">
       <h4>Services</h4>
       <ul>
-        {services.map(([label,href]) => <li><a href={href}>{label}</a></li>)}
+        {services.map(([label,href]) => <li><a href={base + href.slice(1)}>{label}</a></li>)}
       </ul>
     </div>
     <div class="ftr-col">

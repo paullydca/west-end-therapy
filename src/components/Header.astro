@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
+const navHref = (h) => h === '/' ? base : base + h.slice(1);
 const LOGO = 'https://westendtherapy.ca/ws/media-library/5806fd793bd8491daa08742a7fe79f35/wet-logo-final-standard-size-circle.png';
 const nav = [
   { label:'Home', href:'/' },
@@ -19,7 +20,7 @@ const { pathname } = Astro.url;
     </a>
     <nav class="hdr-nav" aria-label="Main navigation">
       {nav.map(n => (
-        <a href={n.href} class:list={['hdr-link', { active: pathname === n.href || (n.href !== '/' && pathname.startsWith(n.href)) }]}>
+        <a href={navHref(n.href)} class:list={['hdr-link', { active: pathname === navHref(n.href) || (n.href !== '/' && pathname.startsWith(navHref(n.href))) }]}>
           {n.label}
         </a>
       ))}
@@ -30,7 +31,7 @@ const { pathname } = Astro.url;
   </div>
 </header>
 <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
-  {nav.map(n => <a href={n.href} class="mob-link">{n.label}</a>)}
+  {nav.map(n => <a href={navHref(n.href)} class="mob-link">{n.label}</a>)}
 </nav>
 <style>
 .site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
