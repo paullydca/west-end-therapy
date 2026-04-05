@@ -1,3 +1,52 @@
+
+const therapistListSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "url": "https://westendtherapy.ca/therapists/",
+    "name": "Our Therapists - West End Therapy Winnipeg",
+    "description": "Meet our team of over 20 Master's-level therapists at West End Therapy in Winnipeg. Each therapist is registered with a professional body in Manitoba.",
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "West End Therapy Team",
+      "numberOfItems": 24,
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"url":"https://westendtherapy.ca/therapists/christine-holowick/","name":"Christine Holowick, MMFT, BSW/RSW"},
+        {"@type":"ListItem","position":2,"url":"https://westendtherapy.ca/therapists/caroline-beattie/","name":"Caroline Beattie, MMFT"},
+        {"@type":"ListItem","position":3,"url":"https://westendtherapy.ca/therapists/simon-thome/","name":"Simon Thome, MMFT"},
+        {"@type":"ListItem","position":4,"url":"https://westendtherapy.ca/therapists/tanya-penner/","name":"Tanya Penner, MMFT"},
+        {"@type":"ListItem","position":5,"url":"https://westendtherapy.ca/therapists/natalia-goles/","name":"Natalia Goles, MSW/RSW"},
+        {"@type":"ListItem","position":6,"url":"https://westendtherapy.ca/therapists/kendra-neufeld/","name":"Kendra Neufeld, MA, CCC"},
+        {"@type":"ListItem","position":7,"url":"https://westendtherapy.ca/therapists/jayda-bossert/","name":"Jayda Bossert, MSW/RSW"},
+        {"@type":"ListItem","position":8,"url":"https://westendtherapy.ca/therapists/jessica-friesen/","name":"Jessica Friesen, MSW/RSW"},
+        {"@type":"ListItem","position":9,"url":"https://westendtherapy.ca/therapists/ashley-de-young/","name":"Ashley de Young, MA, CCC"},
+        {"@type":"ListItem","position":10,"url":"https://westendtherapy.ca/therapists/ellie-jans/","name":"Ellie Jans, MMFT"},
+        {"@type":"ListItem","position":11,"url":"https://westendtherapy.ca/therapists/anastasia-sontag/","name":"Anastasia Sontag, MSW/RSW"},
+        {"@type":"ListItem","position":12,"url":"https://westendtherapy.ca/therapists/sarah-ann-thiessen/","name":"Sarah Ann Thiessen, MMFT"},
+        {"@type":"ListItem","position":13,"url":"https://westendtherapy.ca/therapists/graciela-bustamante/","name":"Graciela Bustamante, MA, CCC"},
+        {"@type":"ListItem","position":14,"url":"https://westendtherapy.ca/therapists/kailene-penner/","name":"Kailene Penner, MMFT (Candidate)"},
+        {"@type":"ListItem","position":15,"url":"https://westendtherapy.ca/therapists/andrew-thiessen/","name":"Andrew Thiessen, MMFT (Candidate)"},
+        {"@type":"ListItem","position":16,"url":"https://westendtherapy.ca/therapists/kristin-hildebrand/","name":"Kristin Hildebrand, MSW/RSW"},
+        {"@type":"ListItem","position":17,"url":"https://westendtherapy.ca/therapists/mike-huebner/","name":"Mike Huebner, MMFT"},
+        {"@type":"ListItem","position":18,"url":"https://westendtherapy.ca/therapists/cathy-neufeld/","name":"Cathy Neufeld, MA, CCC"},
+        {"@type":"ListItem","position":19,"url":"https://westendtherapy.ca/therapists/stephanie-froese/","name":"Stephanie Froese, MMFT"},
+        {"@type":"ListItem","position":20,"url":"https://westendtherapy.ca/therapists/jillian-dyck/","name":"Jillian Dyck, MMFT"},
+        {"@type":"ListItem","position":21,"url":"https://westendtherapy.ca/therapists/adriana-cienfuegos/","name":"Adriana Cienfuegos, MA, CCC"},
+        {"@type":"ListItem","position":22,"url":"https://westendtherapy.ca/therapists/meredith-klassen/","name":"Meredith Klassen, MSW/RSW"},
+        {"@type":"ListItem","position":23,"url":"https://westendtherapy.ca/therapists/jody-schroeder/","name":"Jody Schroeder, MA, CCC"},
+        {"@type":"ListItem","position":24,"url":"https://westendtherapy.ca/therapists/leah-thiessen/","name":"Leah Thiessen, MMFT (Candidate)"}
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://westendtherapy.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Therapists", "item": "https://westendtherapy.ca/therapists/" }
+    ]
+  }
+];
 ---
 import Layout from '../layouts/Layout.astro';
 const IMG_BASE = 'https://westendtherapy.ca/ws/media-library';
@@ -269,6 +318,7 @@ const therapists = [
 ];
 ---
 <Layout title="Winnipeg Therapists" description="Meet our team of over 20 Master's-level therapists in Winnipeg offering counselling and therapy.">
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(therapistListSchema)}></script>
 
   <section class="page-hero">
     <div class="wrap">
