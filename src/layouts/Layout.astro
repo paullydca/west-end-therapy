@@ -1,8 +1,8 @@
 ---
-const base = import.meta.env.BASE_URL;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
+const base = import.meta.env.BASE_URL;
 interface Props { title: string; description?: string; }
 const { title, description = 'West End Therapy offers counselling and therapy in Winnipeg for individuals, couples, and families.' } = Astro.props;
 ---
