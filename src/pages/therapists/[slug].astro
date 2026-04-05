@@ -542,7 +542,6 @@ export function getStaticPaths() {
 const { therapist: t } = Astro.props;
 ---
 <Layout title={t.name + ', ' + t.creds} description={'Book a session with ' + t.name + ' at West End Therapy in Winnipeg.'}>
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(personSchema)}></script>
 
   <section class="thx-hero">
     <div class="wrap thx-hero__inner">
