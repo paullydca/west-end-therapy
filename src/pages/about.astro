@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+const WAITING_ROOM = 'https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg';
+---
+<Layout title="About Us" description="About West End Therapy — locally owned group therapy practice in Winnipeg, MB since 2020.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>About West End Therapy</h1>
+      <p>Locally owned and operated since 2020, serving Winnipeg and Manitoba.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap about-split">
+      <img src={WAITING_ROOM} alt="West End Therapy waiting room" loading="lazy" style="border-radius:4px;"/>
+      <div>
+        <h2>Our Mission</h2>
+        <p style="margin-top:1rem;">West End Therapy was founded in 2020 with a simple but powerful mission: to provide exceptional quality therapy services in a space where people <em>want</em> to come — a place that feels warm, safe, and welcoming from the moment they walk through the door.</p>
+        <p style="margin-top:.75rem;">We are a group psychotherapy and relational therapy practice specializing in providing therapy services in Winnipeg and across Manitoba. All of our therapists have Master's-Level training and are professional members of their respective governing bodies.</p>
+        <p style="margin-top:.75rem;">We accept direct billing from Canada Life, Manitoba Blue Cross, and many other insurance providers, because we believe financial barriers should never stand between someone and the support they need.</p>
+        <a href="/therapists" class="btn btn-teal mt2">Meet Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap">
+      <h2>West End Therapy is committed to creating a welcoming, inclusive space for people of all identities, backgrounds, and lived experiences.</h2>
+      <div style="margin-top:2rem;">
+        <a href="/contact" class="btn btn-teal">Book a Session</a>
+        &nbsp;&nbsp;
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+.about-split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+@media(max-width:768px){.about-split{grid-template-columns:1fr}}
+</style>

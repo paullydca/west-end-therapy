@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+const IMG_BASE = 'https://westendtherapy.ca/ws/media-library';
+const therapists = [
+  {
+    "slug": "christine-holowick",
+    "name": "Christine Holowick",
+    "creds": "MMFT, BSW/RSW",
+    "role": "Clinic Director & Therapist",
+    "spec": "Individuals (16+), Couples, EMDR",
+    "avail": "Closed to new referrals",
+    "waitlist": false,
+    "img": "9b14074c0dc640b2a34d4622c188f7a4/dsc_0164.jpg",
+    "bio": "Christine is the founder and clinical director of West End Therapy. She holds a Master of Marriage and Family Therapy and is a Registered Social Worker. She specialises in couples therapy, individual therapy for adults, and EMDR. Christine brings a warm, collaborative style to her practice and is passionate about helping clients build healthier relationships and overcome the effects of trauma."
+  },
+  {
+    "slug": "caroline-beattie",
+    "name": "Caroline Beattie",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families with Children/Youth",
+    "avail": "Wait List",
+    "waitlist": true,
+    "img": "eacb74ba64194829865812de8032d02c/cb-profile-pic.jpeg",
+    "bio": "Caroline holds a Master of Marriage and Family Therapy. She works with individuals, couples, and families including children and youth. Her approach is strengths-based and relational, drawing on attachment theory and emotionally focused frameworks to help clients build connection and resilience."
+  },
+  {
+    "slug": "simon-thome",
+    "name": "Simon Thome",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families · English & French",
+    "avail": "Wed 9 AM – 2:45 PM · Evenings Wait List",
+    "waitlist": false,
+    "img": "54d9a24e941944839d615b6c7c6689f6/st-profile-pic-cropped.jpeg",
+    "bio": "Simon holds a Master of Marriage and Family Therapy and provides sessions in both English and French. He works with individuals, couples, and families using a systems-based approach. Simon is interested in exploring how cultural and contextual factors shape our experiences and relationships."
+  },
+  {
+    "slug": "melissa-pilz",
+    "name": "Melissa Pilz",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families",
+    "avail": "Wait List",
+    "waitlist": true,
+    "img": "f9c06e146452457ea000edaf61ca844a/img_9968-jpg.jpg",
+    "bio": "Melissa holds a Master of Marriage and Family Therapy. She works with individuals, couples, and families using an emotionally focused and attachment-based lens. Melissa is passionate about helping clients navigate life transitions, relational difficulties, and personal growth."
+  },
+  {
+    "slug": "julie-kettle",
+    "name": "Julie Kettle",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families",
+    "avail": "Mon 9 AM – 2:45 PM · Tues 3 PM – 9 PM",
+    "waitlist": false,
+    "img": "eae9b9ec78ae41aea20fa89bf6cb4f58/f97cd037-9510-4342-9e29-40b3401c5f0f_1_201_a.jpeg",
+    "bio": "Julie holds a Master of Marriage and Family Therapy and has experience working with adults, couples, and families. She uses an integrative, client-centred approach that incorporates elements of narrative, solution-focused, and emotionally focused therapy."
+  },
+  {
+    "slug": "marie-baffoe",
+    "name": "Marie Baffoe",
+    "creds": "MMFT, MSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families, EMDR",
+    "avail": "Wait List",
+    "waitlist": true,
+    "img": "e917830f941b4992ba58b10d9062ea80/230910ls117.jpg",
+    "bio": "Marie holds both a Master of Marriage and Family Therapy and a Master of Social Work. She is trained in EMDR and works with individuals, couples, and families. Marie brings a culturally sensitive approach and is committed to creating an inclusive and affirming therapeutic space."
+  },
+  {
+    "slug": "michael-kurek",
+    "name": "Michael Kurek",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Adults, Couples, Families, EMDR",
+    "avail": "Mon, Tues & Wed 3 – 9 PM",
+    "waitlist": false,
+    "img": "32690e2670654fbd9f2c62c14bddd621/michael-k-bio-phot.jpg",
+    "bio": "Michael holds a Master of Marriage and Family Therapy and is trained in EMDR. He works with adults, couples, and families, drawing on systems theory and trauma-informed approaches. Michael is particularly interested in helping clients who are navigating the impact of trauma on their daily lives and relationships."
+  },
+  {
+    "slug": "mel-clark",
+    "name": "Mel Clark",
+    "creds": "MMFT, CCC",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families",
+    "avail": "Tues, Wed, Thurs daytimes · Mon eve wait list",
+    "waitlist": false,
+    "img": "b29ac3153b1a4df29e7f622301b4af19/mel-clark.jpeg",
+    "bio": "Mel holds a Master of Marriage and Family Therapy and is a Canadian Certified Counsellor. Mel works with individuals, couples, and families using a person-centred and systemic approach, with a focus on creating a warm, non-judgmental space for clients to explore their concerns."
+  },
+  {
+    "slug": "brianna-bowen",
+    "name": "Brianna Bowen",
+    "creds": "MSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Children & Teens, Adults, Families",
+    "avail": "Tues 9 AM – 4 PM · Tues eves Wait List",
+    "waitlist": false,
+    "img": "90022c5db0674e908db3d1c70f8ca96c/img_4751.jpeg",
+    "bio": "Brianna holds a Master of Social Work and is a Registered Social Worker. She specialises in working with children, teens, adults, and families. Brianna uses a trauma-informed, strength-based approach and is passionate about supporting young people and their families through difficult times."
+  },
+  {
+    "slug": "olivia-barker",
+    "name": "Olivia Barker",
+    "creds": "MSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), EMDR",
+    "avail": "Wait List",
+    "waitlist": true,
+    "img": "63b7dd85df5c41eb98f227a9e8e5ed7b/image_50791937-1.jpg",
+    "bio": "Olivia holds a Master of Social Work and is trained in EMDR. She works with individuals aged 16 and over using trauma-informed, attachment-based approaches. Olivia is committed to helping clients process difficult experiences and build greater resilience and self-understanding."
+  },
+  {
+    "slug": "laura-canfield",
+    "name": "Laura Canfield",
+    "creds": "BSW/RSW, MMFT Candidate",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples",
+    "avail": "Tues & Thu 3 PM – 9 PM · Wed & Fri 9 AM – 2:45 PM",
+    "waitlist": false,
+    "img": "1b4b54e62ef0466585641842d34d8699/headshot-laura.jpg",
+    "bio": "Laura holds a Bachelor of Social Work and is currently completing her Master of Marriage and Family Therapy. She works with individuals and couples using a collaborative, systemic lens. Laura is passionate about helping clients navigate relationship challenges and personal growth."
+  },
+  {
+    "slug": "lena-morina",
+    "name": "Lena Morina",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Families (children 8+) & Teens, Individuals, Couples · English & Albanian",
+    "avail": "Mon & Wed 5 PM – 9 PM",
+    "waitlist": false,
+    "img": "29ad796eaa33dd18a6135682541f4c6f/img_4286.jpeg",
+    "bio": "Lena holds a Master of Marriage and Family Therapy and provides sessions in both English and Albanian. She works with families including children aged 8 and over, teens, individuals, and couples. Lena brings a multicultural perspective to her practice."
+  },
+  {
+    "slug": "hyoshin-jang",
+    "name": "Hyoshin Jang",
+    "creds": "MMFT, BSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples, Families · English & Korean",
+    "avail": "Tues, Thurs, Fri eves online · Saturdays wait list",
+    "waitlist": false,
+    "img": "0d6ba507acd069265f4cf668810bcfab/img_0626.jpeg",
+    "bio": "Hyoshin holds a Master of Marriage and Family Therapy and a Bachelor of Social Work. She provides sessions in both English and Korean. Hyoshin works with individuals, couples, and families using a systemic and culturally aware approach."
+  },
+  {
+    "slug": "deanna-lutzek",
+    "name": "Deanna Lutzek",
+    "creds": "MA, CCC",
+    "role": "Associate Therapist",
+    "spec": "Children (7+), Teens, Adults, EMDR",
+    "avail": "Tues 9 AM – 2:45 PM · Fri 4 PM – 7 PM",
+    "waitlist": false,
+    "img": "4724021c5b218e89c24e1f4162a14b7e/image0.jpeg",
+    "bio": "Deanna holds a Master of Arts in Counselling Psychology and is a Canadian Certified Counsellor. She is trained in EMDR and works with children aged 7 and over, teens, and adults. Deanna uses trauma-informed approaches to help clients process difficult experiences."
+  },
+  {
+    "slug": "ioanna-charatsari",
+    "name": "Ioanna Charatsari",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals, Couples, Families (age 6+) · English & Greek",
+    "avail": "Tue & Thur 5 PM – 9 PM",
+    "waitlist": false,
+    "img": "6511fcefc7a0424038d40dddaa532f4f/ioanna-bio-photo2.jpeg",
+    "bio": "Ioanna holds a Master of Marriage and Family Therapy and provides sessions in both English and Greek. She works with individuals, couples, and families including children aged 6 and over. Ioanna brings a systemic, culturally sensitive approach to her work."
+  },
+  {
+    "slug": "sonja-iserloh",
+    "name": "Sonja Iserloh",
+    "creds": "MSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individual Adults",
+    "avail": "Wed 4 PM – 9 PM",
+    "waitlist": false,
+    "img": "2c78baf5e22b29f20b9d958c0ec284f3/img_8201.jpeg",
+    "bio": "Sonja holds a Master of Social Work and is a Registered Social Worker. She works with individual adults using a person-centred, trauma-informed approach. Sonja is passionate about supporting clients through anxiety, depression, life transitions, and personal challenges."
+  },
+  {
+    "slug": "michelle-lewicki",
+    "name": "Michelle Lewicki",
+    "creds": "MMFT, CCC",
+    "role": "Associate Therapist",
+    "spec": "Individuals, Couples, Families",
+    "avail": "Wed & Thur 4 PM – 9 PM · Sun 12 PM – 5 PM",
+    "waitlist": false,
+    "img": "b227ee3a6c48c096e2f79d3c90b78aba/michelle-photo.png",
+    "bio": "Michelle holds a Master of Marriage and Family Therapy and is a Canadian Certified Counsellor. She works with individuals, couples, and families using a relational, strengths-based approach. Michelle is particularly interested in supporting clients through relationship transitions and personal development."
+  },
+  {
+    "slug": "julie-letkeman",
+    "name": "Julie Letkeman",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (Adults & Youth 10+), Couples, Families",
+    "avail": "Wed 6 PM – 9 PM",
+    "waitlist": false,
+    "img": "57c95b618c88fe42e1648c96d3e74db5/julie-l-bio-photo.jpg",
+    "bio": "Julie holds a Master of Marriage and Family Therapy. She works with individuals including youth aged 10 and over, couples, and families. Julie uses a collaborative, systemic approach to help clients navigate challenges and build stronger connections."
+  },
+  {
+    "slug": "kristin-millar",
+    "name": "Kristin Millar",
+    "creds": "MMFT, BSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individuals (Adults & Youth 4+), Couples, Families",
+    "avail": "Tue & Wed 5:30 – 9 PM · Biweekly Fri & Sat 9 AM – 3 PM",
+    "waitlist": false,
+    "img": "fe3316c270838a7b73e566d32ca58fa4/km-picture.jpeg",
+    "bio": "Kristin holds a Master of Marriage and Family Therapy and a Bachelor of Social Work. She works with individuals including young children aged 4 and over, couples, and families. Kristin draws on play therapy techniques and systemic approaches in her work with younger clients."
+  },
+  {
+    "slug": "steven-duvenaud",
+    "name": "Steven Duvenaud",
+    "creds": "MACP, CCC",
+    "role": "Associate Therapist",
+    "spec": "Individuals (15+)",
+    "avail": "Mon, Tue, Thu & Fri 9 AM – 2:45 PM · Wed 3 PM – 9 PM",
+    "waitlist": false,
+    "img": "27e7edcaa9b5a30d32428452ada3f65b/steven-photo.jpeg",
+    "bio": "Steven holds a Master of Arts in Counselling Psychology and is a Canadian Certified Counsellor. He works with individuals aged 15 and over using cognitive-behavioural, person-centred, and mindfulness-based approaches. Steven is passionate about supporting clients through anxiety, depression, and life transitions."
+  },
+  {
+    "slug": "lara-solis",
+    "name": "Lara Solis",
+    "creds": "MSW/RSW",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+) · English & Tagalog",
+    "avail": "Mon 3 PM – 9 PM · Biweekly Tue & Sat · Sun 10 AM – 5 PM",
+    "waitlist": false,
+    "img": "94a8c771975d150154728882e9a4ad67/lara-bio-photo.jpeg",
+    "bio": "Lara holds a Master of Social Work and is a Registered Social Worker. She provides sessions in both English and Tagalog. Lara works with individuals aged 16 and over using a culturally sensitive, trauma-informed approach. She is passionate about supporting newcomers and marginalized communities."
+  },
+  {
+    "slug": "kelly-ferguson",
+    "name": "Kelly Ferguson",
+    "creds": "MMFT",
+    "role": "Associate Therapist",
+    "spec": "Individuals (16+), Couples",
+    "avail": "Wed 9:45 AM – 4:45 PM",
+    "waitlist": false,
+    "img": "7c1c23e7dd9c42d6a8712a2e5980bc5d/kelly-f-bio-photo.jpg",
+    "bio": "Kelly holds a Master of Marriage and Family Therapy. She works with individuals and couples using a systemic, emotionally focused approach. Kelly is interested in helping clients navigate relationship challenges, attachment wounds, and personal growth."
+  },
+  {
+    "slug": "jaymie-friesen",
+    "name": "Jaymie Friesen",
+    "creds": "MPS, CCC",
+    "role": "Associate Therapist",
+    "spec": "Individuals (18+)",
+    "avail": "Mon 3 PM – 9 PM",
+    "waitlist": false,
+    "img": "ceae02a67d028082d642408fb71be668/jaymie-bio-photo.jpg",
+    "bio": "Jaymie holds a Master of Psychotherapy and Spirituality and is a Canadian Certified Counsellor. She works with adults using an integrative, holistic approach that honours the spiritual dimension of human experience. Jaymie is passionate about supporting clients through grief, life transitions, and meaning-making."
+  },
+  {
+    "slug": "katrina-forget",
+    "name": "Katrina Forget",
+    "creds": "MACP, CCC",
+    "role": "Associate Therapist",
+    "spec": "Children & Youth aged 3+, Parents",
+    "avail": "Mon 5 PM – 9 PM · Sat 10 AM – 3 PM",
+    "waitlist": false,
+    "img": "6f4b5f265199d40aa7c751f7a09b050d/kforget-pic.png",
+    "bio": "Katrina holds a Master of Arts in Counselling Psychology and is a Canadian Certified Counsellor. She specialises in working with children and youth aged 3 and over, as well as their parents. Katrina uses play-based, attachment-informed approaches to support children through emotional and behavioural challenges."
+  }
+];
+---
+<Layout title="Winnipeg Therapists" description="Meet our team of over 20 Master's-level therapists in Winnipeg offering counselling and therapy.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Winnipeg Therapists</h1>
+      <p>Qualified &amp; Compassionate Therapists &amp; Counsellors in Winnipeg</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 style="margin-bottom:.5rem;">Meet Our Team of Over 20 Master's-Level Therapists</h2>
+      <p style="margin-bottom:2rem;">Click on a photo for the full bio. Please note some therapists have waiting lists.</p>
+      <div class="thx-grid">
+        {therapists.map(t => (
+          <a href={'/therapists/' + t.slug} class="thx-card">
+            <img src={IMG_BASE + '/' + t.img} alt={t.name} loading="lazy"/>
+            <div class="thx-card__body">
+              <div class="thx-card__name">{t.name}</div>
+              <span class="thx-card__creds">{t.creds}</span>
+              <span class="thx-card__role">{t.role}</span>
+              <p class="thx-card__spec">{t.spec}</p>
+              <div class:list={['thx-card__avail', { waitlist: t.waitlist }]}>{t.avail}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap">
+      <h2>All of our therapists have <em>Master's-Level training</em> and are professional members of their respective professional body in Manitoba.</h2>
+      <p style="max-width:60ch;margin-inline:auto;margin-top:1rem;">West End Therapy is committed to creating a welcoming, inclusive space for people of all identities, backgrounds, and lived experiences.</p>
+      <div style="margin-top:2rem;">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        &ensp;
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+.thx-card__creds{font-size:.7rem;font-weight:600;letter-spacing:.08em;color:var(--mid);display:block;margin-bottom:.15rem}
+</style>

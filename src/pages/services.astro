@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+const IMG_BASE = 'https://westendtherapy.ca/ws/media-library';
+const services = [
+  { slug:'individual-therapy', name:"Individual Therapy", desc:"One-on-one support tailored to you", img:"26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg" },
+  { slug:'couples-therapy', name:"Couples Therapy", desc:"Rebuild connection and grow together", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'family-therapy', name:"Family Therapy", desc:"Strengthen bonds and navigate challenges as a unit", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'child-therapy', name:"Child & Teen Therapy", desc:"Compassionate, age-appropriate support for young people", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'emdr-therapy', name:"EMDR Therapy", desc:"Evidence-based trauma processing and healing", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'anxiety-therapy', name:"Anxiety Therapy", desc:"Practical tools to find calm and move forward", img:"26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg" },
+  { slug:'depression-therapy', name:"Depression Therapy", desc:"Compassionate support to restore energy and reconnect with life", img:"26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg" },
+  { slug:'sex-therapy', name:"Sex Therapy", desc:"Confidential support for intimacy and sexual wellbeing", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'play-therapy', name:"Play Therapy", desc:"Supporting children through the language of play", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'anger-management', name:"Anger Management", desc:"Understand anger and build healthier responses", img:"26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg" },
+  { slug:'grief-therapy', name:"Grief Counselling", desc:"A compassionate space to process loss and find your way forward", img:"5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg" },
+  { slug:'online-therapy', name:"Online Therapy", desc:"Secure, convenient therapy from wherever you are", img:"26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg" }
+];
+---
+<Layout title="Therapy Services" description="West End Therapy offers individual, couples, family, EMDR, child, anxiety and depression therapy in Winnipeg and online across Manitoba.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">What We Offer</p>
+      <h1>Our Therapy Services</h1>
+      <p>Evidence-based, compassionate care for every stage of life. All sessions available in-person and online.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="svc-grid">
+        {services.map(s => (
+          <a href={'/services/' + s.slug} class="svc-card">
+            <img src={IMG_BASE + '/' + s.img} alt={s.name} loading="lazy"/>
+            <div class="svc-card__body">
+              <span class="svc-card__name">{s.name}</span>
+              <p class="svc-card__desc">{s.desc}</p>
+              <span class="svc-card__more">Learn More →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:700px">
+      <h2>Not sure which service is right for you?</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Fill out our 2-minute intake form and we'll match you with the right therapist and service for your unique needs.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our Intake Form</a>
+      &ensp;
+      <a href="/therapists" class="btn btn-outline">Meet Our Therapists</a>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.page-hero h1{margin-block:.25rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+</style>

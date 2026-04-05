@@ -1,0 +1,87 @@
+:root {
+  --teal:#4f6f72;--teal-dark:#3a5558;--teal-light:#e0e6e6;--teal-pale:#f0f4f4;
+  --white:#fff;--black:#1a1a1a;--dark:#2e2e2e;--mid:#5a5a5a;--border:#d4dcdc;
+  --font-h:'Cormorant',Palatino,'Palatino Linotype','Book Antiqua',Georgia,serif;
+  --font-b:'Open Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --max-w:1200px;--t:0.2s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);font-size:16px;line-height:1.7;color:var(--dark);background:#fff}
+img{display:block;max-width:100%}
+input,button,textarea,select{font:inherit}
+a{color:var(--teal);text-decoration:none;transition:color var(--t)}
+a:hover{color:var(--teal-dark)}
+ul{list-style:none}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-h);font-weight:600;line-height:1.2;color:var(--black)}
+h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+h2{font-size:clamp(1.6rem,3vw,2.6rem)}
+h3{font-size:clamp(1.05rem,2vw,1.4rem)}
+p{color:rgba(0,0,0,.54);line-height:1.75}
+.wrap{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:clamp(1rem,4vw,2.5rem)}
+.section{padding-block:clamp(3rem,7vw,5.5rem)}
+.pale{background:var(--teal-pale)}
+.light{background:var(--teal-light)}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.7rem 2rem;border-radius:50px;font-family:var(--font-b);font-size:.78rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;border:1.5px solid transparent;cursor:pointer;transition:background var(--t),color var(--t),border-color var(--t)}
+.btn-ghost{background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.7);backdrop-filter:blur(4px)}
+.btn-ghost:hover{background:rgba(255,255,255,.28);color:#fff}
+.btn-teal{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn-teal:hover{background:var(--teal-dark);border-color:var(--teal-dark);color:#fff}
+.btn-outline{background:transparent;color:var(--teal);border-color:var(--teal)}
+.btn-outline:hover{background:var(--teal);color:#fff}
+/* Service grid */
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+@media(max-width:1100px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.svc-grid{grid-template-columns:1fr}}
+.svc-card{background:var(--teal-light);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t);color:inherit;text-decoration:none}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.1)}
+.svc-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.svc-card__body{padding:1.35rem;flex:1;display:flex;flex-direction:column}
+.svc-card__name{font-family:var(--font-b);font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--black);display:block;margin-bottom:.5rem}
+.svc-card__desc{font-size:.88rem;color:var(--mid);line-height:1.6;flex:1}
+.svc-card__more{display:inline-block;margin-top:.75rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+/* Therapist grid */
+.thx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+@media(max-width:1100px){.thx-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.thx-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:400px){.thx-grid{grid-template-columns:1fr}}
+.thx-card{background:var(--teal-light);border-radius:4px;overflow:hidden;transition:transform var(--t),box-shadow var(--t);color:inherit;text-decoration:none;display:flex;flex-direction:column}
+.thx-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.1)}
+.thx-card img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;display:block}
+.thx-card__body{padding:1rem 1.1rem;flex:1}
+.thx-card__name{font-family:var(--font-h);font-size:1.1rem;color:var(--black);line-height:1.25}
+.thx-card__role{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin:.2rem 0 .4rem;display:block}
+.thx-card__spec{font-size:.8rem;color:var(--mid);line-height:1.5}
+.thx-card__avail{font-size:.75rem;font-weight:600;color:var(--teal-dark);border-top:1px solid var(--border);padding-top:.4rem;margin-top:.4rem}
+.thx-card__avail.waitlist{color:#9a5220}
+/* Two-col banner */
+.twin-banner{display:grid;grid-template-columns:1fr 1fr;background:var(--teal-light)}
+@media(max-width:600px){.twin-banner{grid-template-columns:1fr}}
+.twin-banner__cell{padding:1.75rem clamp(1.5rem,5vw,4rem);text-align:center;border-right:1px solid var(--border)}
+.twin-banner__cell:last-child{border-right:none}
+.twin-banner__cell h3{font-family:var(--font-h);font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--teal-dark);text-transform:lowercase}
+/* Cred logos */
+.cred-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;margin-top:2rem}
+.cred-row img{height:54px;width:auto;object-fit:contain;opacity:.8;filter:grayscale(10%);transition:opacity var(--t)}
+.cred-row img:hover{opacity:1}
+/* Form */
+.form-group{margin-bottom:1rem}
+label{display:block;font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.3rem}
+input[type="text"],input[type="email"],input[type="tel"],select,textarea{width:100%;padding:.65rem 1rem;border:1.5px solid var(--border);border-radius:4px;background:#fff;color:var(--dark);font-size:.93rem;transition:border-color var(--t)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+textarea{resize:vertical;min-height:110px}
+.opt-row{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin-top:.3rem}
+.opt-row label{display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;margin:0;font-size:.85rem}
+input[type="radio"],input[type="checkbox"]{width:auto;accent-color:var(--teal);flex-shrink:0}
+.fgl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);display:block;margin-bottom:.35rem}
+/* Page hero */
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+/* Land acknowledgement */
+.land-ack{background:var(--teal-pale);border-top:1px solid var(--border);padding:1.5rem clamp(1rem,4vw,2.5rem);text-align:center;font-size:.83rem;color:var(--mid);font-style:italic;line-height:1.65}
+.tc{text-align:center}
+.mt1{margin-top:1rem}
+.mt2{margin-top:2rem}

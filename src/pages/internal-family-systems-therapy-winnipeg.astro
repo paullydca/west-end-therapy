@@ -1,0 +1,83 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Internal Family Systems in Winnipeg | West End Therapy" description="Internal Family Systems (IFS) offered at West End Therapy in Winnipeg. Evidence-based therapy for lasting change.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Therapeutic Approach</p>
+      <h1>Internal Family Systems</h1>
+      <p>A powerful, compassionate model that understands the mind as made up of different "parts" — helping you heal inner conflict and reconnect with your core Self.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap approach-layout">
+      <div class="approach-main">
+        <div class="svc-block">
+          <h2>What is Internal Family Systems?</h2>
+          <p>Internal Family Systems (IFS) is a transformative, evidence-based model developed by Dr. Richard Schwartz. IFS understands the mind as a system of distinct sub-personalities or "parts," each with their own perspectives, feelings, and roles.</p>
+          <p>Some parts carry burdens from difficult past experiences (called exiles), while other parts work to protect us from pain (managers and firefighters). IFS therapy helps you build a compassionate relationship with all your parts and access your core Self — a state of calm, clarity, and confidence — to facilitate healing.</p>
+        </div>
+        <div class="svc-block"><h2>Benefits</h2><ul class="check-list"><li>Non-pathologizing — all parts of you are welcome</li>
+            <li>Deeply effective for trauma and shame</li>
+            <li>Builds self-compassion and inner harmony</li>
+            <li>Works well alongside other approaches</li>
+            <li>Helps resolve inner conflict and ambivalence</li></ul></div>
+        <div class="svc-block"><h2>What It Can Help With</h2><ul class="check-list"><li>Trauma and PTSD</li>
+            <li>Depression and anxiety</li>
+            <li>Shame and low self-worth</li>
+            <li>Eating disorders</li>
+            <li>Relationship difficulties</li>
+            <li>Addictions</li>
+            <li>Chronic pain and physical illness</li>
+            <li>Personal growth and self-discovery</li></ul></div>
+        <div class="svc-block cta-block">
+          <h2>Book a Session</h2>
+          <p>Our therapists are trained in Internal Family Systems and integrate it alongside other evidence-based approaches. Fill out our intake form and we'll match you with the right fit.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="margin-top:1rem;">Book a Session</a>
+        </div>
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Start?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with a therapist trained in IFS.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Explore More Approaches</h3>
+          <ul class="sidebar-links">
+            <li><a href="/cognitive-behavioural-therapy">Cognitive Behavioural Therapy</a></li>
+            <li><a href="/dialectical-behavioural-therapy">Dialectical Behaviour Therapy</a></li>
+            <li><a href="/attachment-based-therapy-winnipeg">Attachment-Based Therapy</a></li>
+            <li><a href="/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/internal-family-systems-therapy-winnipeg">Internal Family Systems</a></li>
+            <li><a href="/mindfulness-based-cognitive-therapy-mbct-winnipeg">MBCT</a></li>
+            <li><a href="/narrative-therapy-winnipeg">Narrative Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.page-hero h1{margin-block:.25rem .75rem}
+.page-hero p{max-width:60ch;font-size:1.05rem}
+.approach-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.approach-layout{grid-template-columns:1fr}}
+.approach-main .svc-block{margin-top:2.5rem}.approach-main .svc-block h2{font-size:1.5rem;margin-bottom:1rem}
+.approach-main p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

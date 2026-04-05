@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Attachment-Based Therapy in Winnipeg | West End Therapy" description="Attachment-Based Therapy (Attachment Therapy) offered at West End Therapy in Winnipeg. Evidence-based therapy for lasting change.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Therapeutic Approach</p>
+      <h1>Attachment-Based Therapy</h1>
+      <p>Rooted in attachment theory, this approach explores how early relationships shape your emotional world and current ways of connecting with others.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap approach-layout">
+      <div class="approach-main">
+        <div class="svc-block">
+          <h2>What is Attachment-Based Therapy?</h2>
+          <p>Attachment-Based Therapy draws on attachment theory — the idea that our earliest bonds with caregivers fundamentally shape how we relate to ourselves and others throughout life. Insecure attachment experiences in childhood can result in patterns of anxiety, avoidance, or disorganization in relationships.</p>
+          <p>By exploring these patterns in a safe therapeutic relationship, clients can develop greater self-awareness, heal attachment wounds, and build more secure, satisfying connections with others.</p>
+        </div>
+        <div class="svc-block"><h2>Benefits</h2><ul class="check-list"><li>Helps you understand the roots of relationship patterns</li>
+            <li>Builds earned security through the therapeutic relationship</li>
+            <li>Deepens self-awareness and emotional understanding</li>
+            <li>Improves relationships with partners, children, and others</li>
+            <li>Particularly effective for trauma and relational wounds</li></ul></div>
+        <div class="svc-block"><h2>What It Can Help With</h2><ul class="check-list"><li>Relationship difficulties and attachment anxiety</li>
+            <li>Fear of abandonment or rejection</li>
+            <li>Avoidant patterns in relationships</li>
+            <li>Childhood trauma and neglect</li>
+            <li>Parenting challenges</li>
+            <li>Couples therapy</li>
+            <li>Grief and loss</li></ul></div>
+        <div class="svc-block cta-block">
+          <h2>Book a Session</h2>
+          <p>Our therapists are trained in Attachment-Based Therapy and integrate it alongside other evidence-based approaches. Fill out our intake form and we'll match you with the right fit.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="margin-top:1rem;">Book a Session</a>
+        </div>
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Start?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with a therapist trained in Attachment Therapy.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Explore More Approaches</h3>
+          <ul class="sidebar-links">
+            <li><a href="/cognitive-behavioural-therapy">Cognitive Behavioural Therapy</a></li>
+            <li><a href="/dialectical-behavioural-therapy">Dialectical Behaviour Therapy</a></li>
+            <li><a href="/attachment-based-therapy-winnipeg">Attachment-Based Therapy</a></li>
+            <li><a href="/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/internal-family-systems-therapy-winnipeg">Internal Family Systems</a></li>
+            <li><a href="/mindfulness-based-cognitive-therapy-mbct-winnipeg">MBCT</a></li>
+            <li><a href="/narrative-therapy-winnipeg">Narrative Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.page-hero h1{margin-block:.25rem .75rem}
+.page-hero p{max-width:60ch;font-size:1.05rem}
+.approach-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.approach-layout{grid-template-columns:1fr}}
+.approach-main .svc-block{margin-top:2.5rem}.approach-main .svc-block h2{font-size:1.5rem;margin-bottom:1rem}
+.approach-main p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

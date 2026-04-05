@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+const faqs = [
+  { q: "I'm having trouble accessing the building. What do I do?", a: "Our office is accessible by appointment only. Please contact your therapist directly if you are having trouble accessing the building, as we do not have admin staff on site." },
+  { q: "Which therapists are currently accepting new clients?", a: "Please visit our Currently Accepting New Clients page for the most up-to-date availability. You can also fill out our 2-minute intake form and we will match you with a therapist who is accepting new clients." },
+  { q: "What is the cost per session?", a: "Individual therapy sessions (50 minutes) range from $125–$145. Couples and family sessions range from $145–$185 depending on length. Please see our Rates page for full details, or contact us for more information." },
+  { q: "What are your accepted methods of payment?", a: "We accept e-transfer, credit card, and debit. Payment is due at the time of the session." },
+  { q: "Are your services covered by health insurance?", a: "Many extended health benefit plans include coverage for therapy services. Coverage varies depending on your plan and the credentials of your therapist. We recommend contacting your insurance provider to confirm your coverage before booking." },
+  { q: "Do you direct bill?", a: "We do not currently offer direct billing. We provide a receipt after each session that you can submit to your insurance provider for reimbursement." },
+  { q: "Are your therapists licensed?", a: "All of our therapists hold a Master's degree in their field and are registered or licensed with their respective professional body in Manitoba. This includes the Manitoba College of Social Workers (MCSW), the Canadian Association for Couple and Family Therapy (CACFT), and others." },
+  { q: "How do I choose a therapist?", a: "Choosing the right therapist is important. We encourage you to read through our therapist bios to find someone whose training, approach, and personality feel like a good fit. You can also fill out our intake form and let us match you with the right therapist for your needs." },
+  { q: "What should I expect for the first appointment and after?", a: "Your first session is an opportunity to share what brings you to therapy in a relaxed, non-judgmental setting. Your therapist will listen, ask questions, and begin to understand your situation and goals. Subsequent sessions will build on this, working collaboratively toward the goals you set together." },
+  { q: "How often should I go to therapy?", a: "Most clients attend therapy once per week or every two weeks, especially in the beginning. The frequency of sessions is something you and your therapist will determine together based on your needs, goals, and schedule." },
+  { q: "What else can I do to improve my emotional and mental health?", a: "Therapy is most effective when combined with other healthy habits. These include regular physical activity, adequate sleep, meaningful social connection, time in nature, creative expression, and practices like journaling or mindfulness. Your therapist can offer guidance tailored to your situation." },
+];
+---
+<Layout title="Frequently Asked Questions | West End Therapy" description="Answers to common questions about therapy at West End Therapy in Winnipeg — rates, insurance, booking, and more.">
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know about booking and attending therapy at West End Therapy.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap faq-wrap">
+      {faqs.map((f, i) => (
+        <details class="faq-item" open={i === 0}>
+          <summary class="faq-q">{f.q}</summary>
+          <p class="faq-a">{f.a}</p>
+        </details>
+      ))}
+      <div class="faq-cta">
+        <p>Still have questions? We're happy to help.</p>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-teal">Email Us</a>
+        <a href="tel:+12048099114" class="btn btn-outline">(204) 809-9114</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}.page-hero p{max-width:55ch;font-size:1.05rem}
+.faq-wrap{max-width:760px}
+.faq-item{border:1px solid var(--border);border-radius:6px;margin-bottom:1rem;background:#fff;overflow:hidden}
+.faq-item[open]{border-color:var(--teal)}
+.faq-q{padding:1.25rem 1.5rem;font-family:var(--font-h);font-size:1.15rem;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--black)}
+.faq-q::after{content:'+';font-family:var(--font-b);font-size:1.4rem;font-weight:300;color:var(--teal);flex-shrink:0;margin-left:1rem}
+.faq-item[open] .faq-q::after{content:'−'}
+.faq-a{padding:.25rem 1.5rem 1.25rem;font-size:.97rem;line-height:1.75;color:var(--dark);margin:0}
+.faq-cta{margin-top:3rem;padding:2rem;background:var(--teal-pale);border-radius:6px;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+.faq-cta p{font-size:1rem;font-weight:600;flex:1;margin:0}
+</style>

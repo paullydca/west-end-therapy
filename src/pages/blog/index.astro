@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const posts = [
+  {
+    "slug": "when-should-i-see-a-therapist",
+    "title": "When Should I See a Therapist? Understanding the Signs",
+    "date": "2024-10-13",
+    "author": "West End Therapy",
+    "category": "Resources",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Many people hesitate to seek help, thinking they can manage on their own. Here are the key signs that it might be time to reach out to a professional."
+  },
+  {
+    "slug": "managing-anxiety-practical-tips-for-finding-calm-in-a-chaotic-world",
+    "title": "Managing Anxiety: Practical Tips for Finding Calm in a Chaotic World",
+    "date": "2024-12-15",
+    "author": "West End Therapy",
+    "category": "Mental Health",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Anxiety is manageable. While it might not disappear overnight, there are effective strategies you can use to reduce its grip and regain a sense of control."
+  },
+  {
+    "slug": "getting-the-most-out-of-couples-therapy-10-guidelines-for-success",
+    "title": "Getting the Most Out of Couples Therapy: 10 Guidelines for Success",
+    "date": "2024-07-19",
+    "author": "West End Therapy",
+    "category": "Couples",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "Therapy is most effective when both partners are fully engaged. Here are ten practical guidelines to help you make the most of your couples therapy sessions."
+  },
+  {
+    "slug": "the-decision-to-seek-therapy-embracing-mental-health-care",
+    "title": "The Decision to Seek Therapy: Embracing Mental Health Care",
+    "date": "2024-08-20",
+    "author": "West End Therapy",
+    "category": "Resources",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Deciding to start therapy is deeply personal and often requires courage. Here's what to know about taking that first step toward professional support."
+  },
+  {
+    "slug": "self-help-strategies-for-managing-low-mood-amp-depression",
+    "title": "Self-Help Strategies for Managing Low Mood & Depression",
+    "date": "2024-01-30",
+    "author": "Christine Holowick, MMFT, BSW/RSW",
+    "category": "Mental Health",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Most people will experience a depressive episode at some point. While therapy is important, these strategies can help support your mental health between sessions."
+  },
+  {
+    "slug": "understanding-the-pursue-withdraw-cycle-in-couples-therapy",
+    "title": "Understanding the Pursue-Withdraw Cycle in Couples Therapy",
+    "date": "2024-11-10",
+    "author": "West End Therapy",
+    "category": "Couples",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "One of the most common and distressing patterns in relationships is the pursue-withdraw cycle. Understanding it is the first step toward breaking it."
+  },
+  {
+    "slug": "navigating-your-therapy-journey-a-comprehensive-guide-to-finding-the-right-support",
+    "title": "Navigating Your Therapy Journey: A Comprehensive Guide to Finding the Right Support",
+    "date": "2024-09-10",
+    "author": "West End Therapy",
+    "category": "Resources",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Starting therapy can feel overwhelming. This guide walks you through what to expect, how to choose a therapist, and how to get the most from your experience."
+  },
+  {
+    "slug": "supporting-children-s-emotional-development-through-play",
+    "title": "Supporting Children's Emotional Development Through Play",
+    "date": "2024-07-22",
+    "author": "West End Therapy",
+    "category": "Children & Youth",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "Play is the primary language of childhood. Learn how play therapy supports emotional development and helps children process difficult experiences."
+  },
+  {
+    "slug": "affair-recovery-in-couples-therapy-a-path-to-healing-and-rebuilding-trust",
+    "title": "Affair Recovery in Couples Therapy: A Path to Healing and Rebuilding Trust",
+    "date": "2023-09-05",
+    "author": "West End Therapy",
+    "category": "Couples",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "Recovering from an affair is one of the most challenging journeys a couple can face. With the right support, many couples can rebuild trust and create a stronger relationship."
+  },
+  {
+    "slug": "doing-new-year-s-resolutions-differently-how-therapy-can-help",
+    "title": "Doing New Year's Resolutions Differently: How Therapy Can Help",
+    "date": "2023-01-03",
+    "author": "West End Therapy",
+    "category": "Resources",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "Instead of setting goals you'll abandon by February, consider using the new year as an opportunity to invest in lasting change with the support of a therapist."
+  },
+  {
+    "slug": "fair-division-of-labour-in-couples",
+    "title": "Fair Division of Labour in Couples",
+    "date": "2023-05-16",
+    "author": "West End Therapy",
+    "category": "Couples",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "Disagreements about household responsibilities are among the most common sources of tension in relationships. Here's how to approach the conversation constructively."
+  },
+  {
+    "slug": "understanding-emdr-vs-talk-therapy-which-approach-is-right-for-you",
+    "title": "Understanding EMDR vs. Talk Therapy: Which Approach Is Right for You?",
+    "date": "2024-01-20",
+    "author": "West End Therapy",
+    "category": "Therapy Types",
+    "img": "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg",
+    "excerpt": "EMDR and traditional talk therapy are both effective treatments. Learn the key differences and how to decide which approach might work best for your situation."
+  },
+  {
+    "slug": "winnipeg-therapy-clinic-announces-renovation-and-expansion-of-its-space",
+    "title": "Winnipeg Therapy Clinic Announces Renovation and Expansion of Its Space",
+    "date": "2023-03-22",
+    "author": "West End Therapy",
+    "category": "News",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "West End Therapy is excited to announce the renovation and expansion of our Winnipeg clinic, creating a more welcoming and comfortable space for our clients."
+  },
+  {
+    "slug": "west-end-therapy-expands-team-with-five-new-therapists-to-meet-growing-community-demand",
+    "title": "West End Therapy Expands Team with Five New Therapists",
+    "date": "2024-11-15",
+    "author": "West End Therapy",
+    "category": "News",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "We are proud to welcome five new therapists to our growing team, expanding our capacity to serve the Winnipeg community with compassionate, evidence-based care."
+  },
+  {
+    "slug": "west-end-therapy-expands-trauma-therapy-services-with-addition-of-two-new-emdr-therapists",
+    "title": "West End Therapy Expands Trauma Therapy Services with Two New EMDR Therapists",
+    "date": "2024-06-05",
+    "author": "West End Therapy",
+    "category": "News",
+    "img": "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg",
+    "excerpt": "We're excited to announce the addition of two new EMDR-trained therapists, strengthening our capacity to provide cutting-edge trauma therapy in Winnipeg."
+  }
+];
+
+function fmtDate(d) {
+  return new Date(d).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+<Layout title="Blog | West End Therapy Winnipeg" description="Mental health articles, therapy tips, and clinic news from the West End Therapy team in Winnipeg.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Our Blog</h1>
+      <p>Mental health insights, therapy resources, and clinic news from the West End Therapy team.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="blog-grid">
+        {posts.map(post => (
+          <a href={'/blog/' + post.slug} class="blog-card">
+            <div class="blog-img-wrap">
+              <img src={post.img} alt={post.title} loading="lazy" />
+              <span class="blog-cat">{post.category}</span>
+            </div>
+            <div class="blog-body">
+              <time class="blog-date" datetime={post.date}>{fmtDate(post.date)}</time>
+              <h2 class="blog-title">{post.title}</h2>
+              <p class="blog-excerpt">{post.excerpt}</p>
+              <span class="blog-more">Read Article →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.page-hero { background: linear-gradient(135deg, var(--teal-light), var(--teal-pale)); padding-block: clamp(3rem, 7vw, 5rem); border-bottom: 1px solid var(--border); }
+.page-hero h1 { margin-block: .5rem .75rem; }
+.page-hero p { max-width: 55ch; font-size: 1.05rem; }
+
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+@media(max-width: 1000px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media(max-width: 600px)  { .blog-grid { grid-template-columns: 1fr; } }
+
+.blog-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,.1); }
+
+.blog-img-wrap { position: relative; overflow: hidden; flex-shrink: 0; }
+.blog-img-wrap img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; transition: transform .35s; }
+.blog-card:hover .blog-img-wrap img { transform: scale(1.04); }
+
+.blog-cat {
+  position: absolute; top: .75rem; left: .75rem;
+  background: var(--teal); color: #fff;
+  font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  padding: .22rem .6rem; border-radius: 3px;
+}
+
+.blog-body { padding: 1.35rem; display: flex; flex-direction: column; flex: 1; }
+.blog-date { font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: var(--mid); text-transform: uppercase; margin-bottom: .5rem; display: block; }
+.blog-title { font-family: var(--font-h); font-size: 1.18rem; line-height: 1.3; color: var(--black); margin-bottom: .65rem; flex: 1; }
+.blog-excerpt { font-size: .88rem; color: var(--mid); line-height: 1.65; margin-bottom: 1rem; }
+.blog-more { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-top: auto; }
+</style>

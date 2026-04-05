@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const heroImg = "https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg";
+---
+<Layout title="Family Therapy in Winnipeg | West End Therapy" description="Family therapy in Winnipeg for all family configurations. Compassionate, systemic counselling to improve communication and resolve conflict.">
+
+  <section class="svc-hero" style={`background-image:url('${heroImg}')`}>
+    <div class="svc-hero__overlay"></div>
+    <div class="wrap svc-hero__content">
+      <p class="eyebrow">Strengthen bonds and navigate challenges as a unit</p>
+      <h1>Family Therapy in Winnipeg</h1>
+      <div class="hero-btns">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap svc-layout">
+      <div class="svc-main">
+
+        <div class="svc-intro">
+          <p>At West End Therapy, we recognize that family relationships are among the most significant in our lives. Family therapy provides a space for family members to come together, improve communication, resolve conflicts, and strengthen the bonds that hold them together.</p>
+      <p>Our therapists work with all family configurations — blended families, single-parent families, multi-generational families, and more. We take a systemic approach, understanding that each family member's wellbeing is deeply connected to the health of the family system as a whole.</p>
+        </div>
+
+        <div class="svc-block">
+          <h2>Issues We Help Address</h2>
+          <ul class="check-list">
+            <li>Communication breakdowns between family members</li>
+            <li>Parent-child conflict or difficulties with adolescents</li>
+            <li>Blended family adjustment challenges</li>
+            <li>Navigating grief, loss, or major life transitions as a family</li>
+            <li>Supporting a family member with mental health or addiction concerns</li>
+            <li>Rebuilding trust after conflict or estrangement</li>
+            <li>Co-parenting difficulties after separation or divorce</li>
+            <li>Intergenerational trauma and its impact on family dynamics</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>Our Therapeutic Approaches</h2>
+          <ul class="approach-list">
+            <li>Structural Family Therapy</li>
+            <li>Emotionally Focused Family Therapy</li>
+            <li>Narrative Therapy</li>
+            <li>Bowenian Family Systems Therapy</li>
+            <li>Solution-Focused Brief Therapy</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>What to Expect</h2>
+          <p>Family therapy sessions typically involve two or more family members attending together. Your therapist may also meet with individual family members at times to better understand different perspectives. Sessions are designed to be collaborative, with your therapist helping to facilitate conversations that might be difficult to have on your own.</p>
+      <p>The goal is to help your family develop healthier patterns of communication and connection that last well beyond the therapy room.</p>
+        </div>
+
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Get Started?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with the right therapist.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;">Email Us</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact Us</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="margin-top:.6rem;font-size:.85rem;">759 Wall St<br>Winnipeg, MB R3G 2T6</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <ul class="sidebar-links">
+            <li><a href="/services/individual-therapy">Individual Therapy</a></li>
+            <li><a href="/services/couples-therapy">Couples Therapy</a></li>
+            <li><a href="/services/family-therapy">Family Therapy</a></li>
+            <li><a href="/services/child-therapy">Child &amp; Teen Therapy</a></li>
+            <li><a href="/services/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/services/anxiety-therapy">Anxiety Therapy</a></li>
+            <li><a href="/services/depression-therapy">Depression Therapy</a></li>
+            <li><a href="/services/sex-therapy">Sex Therapy</a></li>
+            <li><a href="/services/play-therapy">Play Therapy</a></li>
+            <li><a href="/services/anger-management">Anger Management</a></li>
+            <li><a href="/services/grief-therapy">Grief Counselling</a></li>
+            <li><a href="/services/online-therapy">Online Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:680px">
+      <h2>Take the First Step Today</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Our team of Master's-level therapists is here to support you. Fill out our intake form and we'll get back to you within 24 hours.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our 2-Minute Intake Form</a>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.svc-hero{min-height:420px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}
+.svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 100%)}
+.svc-hero__content{position:relative;z-index:1;padding-block:clamp(3rem,8vw,5rem)}
+.svc-hero__content h1{color:#fff;font-size:clamp(1.8rem,5vw,3rem);margin-block:.5rem 1.5rem;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);display:block;margin-bottom:.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.svc-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.svc-layout{grid-template-columns:1fr}}
+.svc-intro p{font-size:1.05rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.svc-block{margin-top:2.5rem}
+.svc-block h2{font-size:1.5rem;margin-bottom:1rem;color:var(--black)}
+.svc-block p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.approach-list{display:grid;gap:.5rem}
+.approach-list li{padding:.4rem .75rem .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--dark)}
+.approach-list li::before{content:'→';position:absolute;left:.25rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem;color:var(--black)}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links li::before{display:none}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

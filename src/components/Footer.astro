@@ -1,0 +1,75 @@
+---
+const LOGO = 'https://westendtherapy.ca/ws/media-library/43b07bc5ac6c5215507cc1e8a9d0f441/wet-logo-final-standard-size-circle.png';
+const services = [
+  ['Anger Management','/anger-management'],['Couple Therapy','/couples-therapy'],
+  ['Child Therapy','/child-therapy'],['Divorce Therapy','/divorce-counselling'],
+  ['EMDR Therapy','/emdr-therapy'],['Family Therapy','/family-therapy'],
+  ['Individual Therapy','/individual-therapy'],['Online Therapy','/online-therapy'],
+  ['Play Therapy','/play-therapy'],['Sex Therapy','/sex-therapy'],
+  ['Trauma Therapy','/trauma-therapy'],['Therapy for Teens','/therapy-for-teens'],
+];
+---
+<footer class="site-footer">
+  <div class="wrap ftr-grid">
+    <div class="ftr-col ftr-about">
+      <a href="/"><img src={LOGO} alt="West End Therapy" class="ftr-logo"/></a>
+      <p>Locally owned since 2020, we provide expert therapy and mental health services at <a href="https://maps.app.goo.gl/8cHBVMuQ6hXhFEZKA" target="_blank" rel="noopener">759 Wall St, Winnipeg</a>. Specializing in individual, couples, family, and child therapy.</p>
+      <div class="ftr-contact">
+        <p><strong>Email:</strong> <a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+        <p><strong>Call:</strong> <a href="tel:+12048099114">(204) 809-9114</a></p>
+      </div>
+      <a href="/#intake-form" class="btn btn-teal" style="margin-top:1rem;font-size:.72rem;">2 Minute Intake Form</a>
+      <div class="ftr-social">
+        <a href="https://www.facebook.com/westendtherapy20/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/westendtherapy20/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="ftr-col">
+      <h4>Services</h4>
+      <ul>
+        {services.map(([label,href]) => <li><a href={href}>{label}</a></li>)}
+      </ul>
+    </div>
+    <div class="ftr-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/therapists">Our Therapists</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/opportunities">Opportunities</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/terms-of-service">Terms of Service</a></li>
+        <li><a href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="land-ack">
+    With gratitude, we acknowledge that we are gathered on Treaty 1 territory, the homeland of the Red River Métis, and the traditional territories of the Anishinaabeg, Cree, Oji-Cree, Dakota and Dene peoples.
+  </div>
+</footer>
+<style>
+.site-footer{background:var(--teal-dark);color:rgba(255,255,255,.85);margin-top:0}
+.ftr-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-block:3.5rem}
+@media(max-width:900px){.ftr-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.ftr-grid{grid-template-columns:1fr}}
+.ftr-logo{width:80px;height:80px;object-fit:contain;border-radius:50%;margin-bottom:1rem}
+.ftr-about p{font-size:.88rem;color:rgba(255,255,255,.7);margin-bottom:.5rem;line-height:1.65}
+.ftr-about a{color:rgba(255,255,255,.85);transition:color var(--t)}
+.ftr-about a:hover{color:#fff}
+.ftr-contact{margin-top:.75rem;display:flex;flex-direction:column;gap:.3rem}
+.ftr-contact p{font-size:.85rem;color:rgba(255,255,255,.7)}
+.ftr-contact strong{color:rgba(255,255,255,.9)}
+.ftr-social{display:flex;gap:1rem;margin-top:1.25rem}
+.ftr-social a{color:rgba(255,255,255,.7);transition:color var(--t);display:flex;align-items:center}
+.ftr-social a:hover{color:#fff}
+.ftr-col h4{font-family:var(--font-b);font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1rem}
+.ftr-col ul{display:flex;flex-direction:column;gap:.4rem}
+.ftr-col a{font-size:.85rem;color:rgba(255,255,255,.7);transition:color var(--t)}
+.ftr-col a:hover{color:#fff}
+.land-ack{background:rgba(0,0,0,.2);border-top:1px solid rgba(255,255,255,.1);padding:1.25rem clamp(1rem,4vw,2.5rem);text-align:center;font-size:.8rem;color:rgba(255,255,255,.55);font-style:italic;line-height:1.65}
+</style>

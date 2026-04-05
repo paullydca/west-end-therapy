@@ -1,0 +1,310 @@
+---
+import Layout from '../layouts/Layout.astro';
+const HERO_BG = 'https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg';
+const WAITING_ROOM = 'https://westendtherapy.ca/ws/media-library/5254cef2b1244a5fc2b5e6226a7edcd4/waiting-room-v2.jpeg';
+const LGBTQ = 'https://westendtherapy.ca/ws/media-library/d783265d81c0ce4393398a49a9aaafbd/lgbtqia2s.png';
+const PSYCH_TODAY = 'https://westendtherapy.ca/ws/media-library/ff949bc5a2272a6273983fb9dd730109/psychology-today-logo.png';
+const MCSW = 'https://westendtherapy.ca/ws/media-library/273d6eb37ae61934ca969443a541df05/mcsw.jpg';
+const CCC = 'https://westendtherapy.ca/ws/media-library/794734932a8723f010378bc091389ffb/ccc-logo_colour.png';
+const CACFT = 'https://westendtherapy.ca/ws/media-library/fb8df6b7dfbfe4beb9e149b56116693f/cacft.jpg';
+const IMG_JPG = 'https://westendtherapy.ca/ws/media-library/4631492ee0159a9d1a393753dd3e309d/images.jpg';
+const IMG_BASE = 'https://westendtherapy.ca/ws/media-library';
+const services = [
+  {
+    "href": "/trauma-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/d07ef3ff282b47aa077c333d9d9cb0b2/trauma-therapy-winnnipeg.jpg",
+    "alt": "Trauma Therapy",
+    "name": "TRAUMA THERAPY",
+    "desc": "Whether from childhood, relationships, or recent events, we offer trauma-informed care to support your healing journey."
+  },
+  {
+    "href": "/individual-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/76702c0005ec9158ccc2d63588937fe8/3llqmbfv4gm.jpeg",
+    "alt": "Individual Therapy",
+    "name": "INDIVIDUAL THERAPY",
+    "desc": "Struggling with anxiety, trauma, or grief? Our one-on-one approach offers the space to heal, grow, and gain clarity."
+  },
+  {
+    "href": "/emdr-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/84fde20064f95ccd01a956717c8994b9/anger-therapy11.jpg",
+    "alt": "EMDR Therapy",
+    "name": "EMDR THERAPY",
+    "desc": "Process trauma, reduce distress, and move forward with evidence-based healing through EMDR Therapy."
+  },
+  {
+    "href": "/couples-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/ec0880fa0a7a5ce61b0e340d3343bbe5/ccjgyjuudxe.jpeg",
+    "alt": "Couples Therapy",
+    "name": "COUPLES THERAPY",
+    "desc": "Strengthen your connection, improve communication, and navigate challenges together through Couples Therapy."
+  },
+  {
+    "href": "/child-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/223a25080bbfae30ea62244d63e452a5/child-therapy11.jpg",
+    "alt": "Child Therapy",
+    "name": "CHILD THERAPY",
+    "desc": "Help your child navigate big emotions and build healthy coping skills through Child Therapy."
+  },
+  {
+    "href": "/therapy-for-teens",
+    "img": "https://westendtherapy.ca/ws/media-library/a73b4ce36899d3573c196f21c7a0ac87/gwvmbgpp-pq.jpeg",
+    "alt": "Therapy for Teens",
+    "name": "THERAPY FOR TEENS",
+    "desc": "Support your teen through life's challenges with counselling focused on identity, emotions, and healthy development."
+  },
+  {
+    "href": "/anger-management",
+    "img": "https://westendtherapy.ca/ws/media-library/76026e49c895f2883c778b9d16c38242/ct1mx5otn9a.jpeg",
+    "alt": "Anger Management",
+    "name": "ANGER MANAGEMENT",
+    "desc": "Regain control, build emotional resilience, and respond with intention through Anger Management."
+  },
+  {
+    "href": "/play-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/0f2a87085a00f7e481c461a8e30f4b2e/zodkrmnkylk.jpeg",
+    "alt": "Play Therapy",
+    "name": "PLAY THERAPY",
+    "desc": "Help your child express emotions and build confidence in a safe, supportive space through Play Therapy."
+  },
+  {
+    "href": "/divorce-counselling",
+    "img": "https://westendtherapy.ca/ws/media-library/2bb1421bc057eddabe8df298212d3421/wr3comvzjxu.jpeg",
+    "alt": "Divorce Counselling",
+    "name": "DIVORCE COUNSELLING",
+    "desc": "Navigate the emotional and practical challenges of separation with clarity and support."
+  },
+  {
+    "href": "/family-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/6581ecfd948910c5e6ad93476b467190/en1is3ksrzw.jpeg",
+    "alt": "Family Therapy",
+    "name": "FAMILY THERAPY",
+    "desc": "Foster healthier communication, resolve conflict, and strengthen your family bonds through Family Therapy."
+  },
+  {
+    "href": "/online-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/e99f68acaae6c33f34deb02904c927de/online-therapy.jpg",
+    "alt": "Online Therapy",
+    "name": "ONLINE THERAPY",
+    "desc": "Access professional support from the comfort of your home with flexible and confidential Online Therapy."
+  },
+  {
+    "href": "/sex-therapy",
+    "img": "https://westendtherapy.ca/ws/media-library/5110321d9ab9b5ecd106565167c91858/d-dh6yuy8-m.jpeg",
+    "alt": "Sex Therapy",
+    "name": "SEX THERAPY",
+    "desc": "Explore intimacy, improve communication, and address sexual concerns with compassionate guidance."
+  }
+];
+---
+<Layout title="Counseling & Therapy Services in Winnipeg">
+
+  <!-- HERO -->
+  <section class="hero" style={`background-image:url('${HERO_BG}')`}>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Counselling &amp; Therapy in Winnipeg</h1>
+      <p class="hero-sub">For Individuals, Couples &amp; Families</p>
+      <div class="hero-btns">
+        <a href="/contact" class="btn btn-ghost">Book A Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION BANNER -->
+  <div class="twin-banner">
+    <div class="twin-banner__cell"><h3>in-person therapy in Winnipeg</h3></div>
+    <div class="twin-banner__cell"><h3>online therapy across manitoba</h3></div>
+  </div>
+
+  <!-- ACCEPTING SECTION -->
+  <section class="section pale">
+    <div class="wrap tc">
+      <h2>Meet Our Team of Over 20 Master's-Level Therapists</h2>
+      <p style="max-width:60ch;margin-inline:auto;margin-top:.75rem;">Click on a photo for the full bio. Please note some therapists have waiting lists.</p>
+      <div class="accept-btns">
+        <a href="/therapists?accepting=true" class="btn btn-outline mt1">Therapists Currently Accepting</a>
+        <a href="/therapists" class="btn btn-teal mt1">Meet Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="svc-header tc">
+        <h2>Services we Offer</h2>
+        <p style="max-width:65ch;margin-inline:auto;margin-top:.75rem;">We are a group psychotherapy and relational therapy practice specializing in providing therapy services in Winnipeg and across Manitoba.</p>
+      </div>
+      <div class="svc-grid" style="margin-top:2.5rem;">
+        {services.map(s => (
+          <a href={s.href} class="svc-card">
+            <img src={s.img} alt={s.alt} loading="lazy"/>
+            <div class="svc-card__body">
+              <span class="svc-card__name">{s.name}</span>
+              <p class="svc-card__desc">{s.desc}</p>
+              <span class="svc-card__more">Learn more →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA ROW -->
+  <section class="section light tc">
+    <div class="wrap">
+      <a href="/contact" class="btn btn-teal">Book a Session</a>
+      &nbsp;&nbsp;
+      <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline">Email Us</a>
+    </div>
+  </section>
+
+  <!-- WAITING ROOM / YOU ARE WELCOME HERE -->
+  <section class="welcome-section">
+    <img src={WAITING_ROOM} alt="West End Therapy waiting room" class="welcome-img" loading="lazy"/>
+    <div class="welcome-text">
+      <h2>You are Welcome Here.</h2>
+      <p>At our clinic, we believe that a beautiful space sets the stage for the important therapeutic work ahead. Our waiting room is designed to be calm, welcoming and comfortable — because healing begins the moment you walk through the door.</p>
+    </div>
+  </section>
+
+  <!-- INSURANCE -->
+  <section class="section pale">
+    <div class="wrap tc">
+      <h2>Do you have health insurance?</h2>
+      <p style="max-width:65ch;margin-inline:auto;margin-top:.75rem;">All of our therapists are covered by Canada Life and Manitoba Blue Cross. We also have therapists registered with First Nations &amp; Inuit Health Branch, SunLife, and Medavie Blue Cross.</p>
+      <p style="max-width:65ch;margin-inline:auto;margin-top:.5rem;">All insurance plans cover different therapist designations. Please consult your plan, and if you have questions, please contact us.</p>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section">
+    <div class="wrap tc">
+      <h2>All of our therapists have <em>Master's-Level training</em> and are professional members of their respective professional body in Manitoba.</h2>
+      <p style="max-width:65ch;margin-inline:auto;margin-top:1rem;">West End Therapy is committed to creating a welcoming, inclusive space for people of all identities, backgrounds, and lived experiences.</p>
+      <div class="cred-row">
+        <img src={LGBTQ} alt="LGBTQIA2S+ affirming" loading="lazy"/>
+        <img src={PSYCH_TODAY} alt="Psychology Today" loading="lazy"/>
+        <img src={MCSW} alt="MCSW" loading="lazy"/>
+        <img src={CCC} alt="CCC" loading="lazy"/>
+        <img src={CACFT} alt="CACFT" loading="lazy"/>
+        <img src={IMG_JPG} alt="Professional body" loading="lazy"/>
+      </div>
+      <div style="margin-top:2rem;">
+        <a href="/contact" class="btn btn-teal">Book a Session</a>
+        &nbsp;&nbsp;
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTAKE FORM -->
+  <section class="section pale" id="intake-form">
+    <div class="wrap" style="max-width:760px;">
+      <h2 class="tc">2-Minute Intake Form</h2>
+      <p class="tc" style="margin-top:.5rem;margin-bottom:2rem;">To connect with a therapist, please fill out the fields below. We will get back to you the same day or within 24 hours.</p>
+      <form class="intake-form" netlify name="intake">
+        <div class="form-group"><label>Name</label><input type="text" name="name" placeholder="Name" required/></div>
+        <div class="form-group"><label>E-mail</label><input type="email" name="email" placeholder="E-mail" required/></div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="Phone Number"/></div>
+        <div class="form-group"><label>City/Town</label><input type="text" name="city" placeholder="City/Town"/></div>
+        <div class="form-group"><label>Age(s) of potential client(s):</label><input type="text" name="ages" placeholder="Age(s)"/></div>
+        <div class="form-group">
+          <span class="fgl">Gender</span>
+          <div class="opt-row">
+            <label><input type="radio" name="gender" value="Female"/> Female</label>
+            <label><input type="radio" name="gender" value="Male"/> Male</label>
+            <label><input type="radio" name="gender" value="Non-Binary"/> Non-Binary</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="fgl">I am seeking:</span>
+          <div class="opt-row">
+            <label><input type="radio" name="seeking" value="Individual therapy"/> Individual therapy</label>
+            <label><input type="radio" name="seeking" value="Couples therapy"/> Couples therapy</label>
+            <label><input type="radio" name="seeking" value="Family therapy"/> Family therapy</label>
+            <label><input type="radio" name="seeking" value="EMDR therapy"/> EMDR therapy</label>
+            <label><input type="radio" name="seeking" value="Child & Adolescent therapy"/> Child &amp; Adolescent therapy</label>
+          </div>
+        </div>
+        <div class="form-group"><label>Reason for seeking therapy / What do you want to work on?</label><textarea name="reason" placeholder="Reason for seeking therapy/What do you want to work on?"></textarea></div>
+        <div class="form-group">
+          <span class="fgl">When are you available? (check all that apply)</span>
+          <div class="opt-row">
+            <label><input type="checkbox" name="avail" value="Mornings"/> Mornings</label>
+            <label><input type="checkbox" name="avail" value="Afternoons"/> Afternoons</label>
+            <label><input type="checkbox" name="avail" value="Evenings"/> Evenings</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="fgl">On which days? (check all that apply)</span>
+          <div class="opt-row">
+            {['Mondays','Tuesdays','Wednesdays','Thursdays','Fridays','Saturdays','Sundays'].map(d => (
+              <label><input type="checkbox" name="days" value={d}/> {d}</label>
+            ))}
+          </div>
+        </div>
+        <div class="form-group"><label>Please provide any additional info about availability, if needed:</label><textarea name="avail_notes" placeholder="Additional availability info..."></textarea></div>
+        <div class="form-group">
+          <span class="fgl">Preferred modality (check all that apply):</span>
+          <div class="opt-row">
+            <label><input type="checkbox" name="modality" value="In-person Sessions"/> In-person Sessions</label>
+            <label><input type="checkbox" name="modality" value="Online Sessions"/> Online Sessions</label>
+            <label><input type="checkbox" name="modality" value="Phone Sessions"/> Phone Sessions</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="fgl">Do you have insurance?</span>
+          <div class="opt-row">
+            {['Manitoba Blue Cross','Canada Life','Treaty Status / First Nations & Inuit Health Branch','SunLife','Medavie Blue Cross (RCMP)','Medavie Blue Cross (non-RCMP)','My insurance isn\'t listed here','I do not have insurance'].map(ins => (
+              <label><input type="checkbox" name="insurance" value={ins}/> {ins}</label>
+            ))}
+          </div>
+        </div>
+        <div class="form-group">
+          <span class="fgl">Preferred gender of the therapist:</span>
+          <div class="opt-row">
+            <label><input type="radio" name="pref_gender" value="Female"/> Female</label>
+            <label><input type="radio" name="pref_gender" value="Male"/> Male</label>
+            <label><input type="radio" name="pref_gender" value="No preference"/> No preference</label>
+          </div>
+        </div>
+        <div class="form-group"><label>Are there any specific therapist(s) you would like to work with?</label><textarea name="specific_therapist" placeholder="Specific therapist preference..."></textarea></div>
+        <div class="form-group"><label>Have we missed anything? Please provide any additional info you'd like us to know:</label><textarea name="extra" placeholder="Additional information..."></textarea></div>
+        <div class="form-group">
+          <span class="fgl">How did you hear about us?</span>
+          <div class="opt-row">
+            {['Psychology Today','Google Search','Social Media','Flyer','Friends/Family','Referred by another Service Provider','Chat GPT/AI','Other'].map(src => (
+              <label><input type="checkbox" name="source" value={src}/> {src}</label>
+            ))}
+          </div>
+        </div>
+        <div class="form-group"><label>If referred, please let us know who referred you:</label><input type="text" name="referrer" placeholder="Referred by..."/></div>
+        <div class="form-group"><label>If you selected "Other", how did you hear about us?</label><input type="text" name="other_source" placeholder="How did you hear about us?"/></div>
+        <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:.5rem;">Submit</button>
+      </form>
+    </div>
+  </section>
+
+</Layout>
+<style>
+/* Hero */
+.hero{min-height:100vh;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;display:flex;align-items:center}
+.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,.08)}
+.hero-content{position:relative;z-index:1;padding:clamp(2rem,8vw,6rem) clamp(1.5rem,6vw,5rem);max-width:680px}
+.hero-content h1{font-family:var(--font-h);font-size:clamp(2rem,6vw,4rem);font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:.04em;line-height:1.1;margin-bottom:.75rem;text-shadow:0 2px 12px rgba(0,0,0,.18)}
+.hero-sub{font-family:var(--font-b);font-size:clamp(.8rem,2vw,1rem);font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:2rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+/* Accept */
+.accept-btns{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.5rem}
+/* Welcome section */
+.welcome-section{display:grid;grid-template-columns:1fr 1fr;min-height:460px}
+@media(max-width:768px){.welcome-section{grid-template-columns:1fr}}
+.welcome-img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.welcome-text{padding:clamp(2rem,6vw,5rem) clamp(2rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;background:var(--teal-pale)}
+.welcome-text h2{margin-bottom:1.25rem}
+.welcome-text p{font-size:.95rem;line-height:1.75}
+/* Intake form */
+.intake-form{background:#fff;padding:2rem;border-radius:4px;border:1px solid var(--border)}
+</style>

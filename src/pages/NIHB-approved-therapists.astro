@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="NIHB-Approved Therapists Winnipeg | West End Therapy" description="West End Therapy therapists who accept Non-Insured Health Benefits (NIHB) for First Nations and Inuit clients in Winnipeg.">
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>NIHB-Approved Therapists</h1>
+      <p>The following therapists at West End Therapy accept Non-Insured Health Benefits (NIHB), the federal health benefit program for First Nations and Inuit clients.</p>
+      <a href="/therapists" class="btn btn-outline" style="margin-top:1.25rem;display:inline-flex;">View All Therapists</a>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="thx-grid">
+          <a href="/therapists/marie-baffoe" class="thx-card">
+            <img src="https://westendtherapy.ca/ws/media-library/e917830f941b4992ba58b10d9062ea80/230910ls117.jpg" alt="Marie Baffoe" loading="lazy"/>
+            <div class="thx-card__body">
+              <div class="thx-card__name">Marie Baffoe</div>
+              <span class="thx-card__creds">MMFT, MSW/RSW</span>
+              <span class="thx-card__role">Associate Therapist</span>
+              <p class="thx-card__spec">Individuals (16+), Couples, Families, EMDR</p>
+              <div class="thx-card__avail waitlist">Wait List</div>
+            </div>
+          </a>
+          <a href="/therapists/brianna-bowen" class="thx-card">
+            <img src="https://westendtherapy.ca/ws/media-library/90022c5db0674e908db3d1c70f8ca96c/img_4751.jpeg" alt="Brianna Bowen" loading="lazy"/>
+            <div class="thx-card__body">
+              <div class="thx-card__name">Brianna Bowen</div>
+              <span class="thx-card__creds">MSW/RSW</span>
+              <span class="thx-card__role">Associate Therapist</span>
+              <p class="thx-card__spec">Children & Teens, Adults, Families</p>
+              <div class="thx-card__avail">Tues 9 AM – 4 PM</div>
+            </div>
+          </a>
+          <a href="/therapists/lara-solis" class="thx-card">
+            <img src="https://westendtherapy.ca/ws/media-library/94a8c771975d150154728882e9a4ad67/lara-bio-photo.jpeg" alt="Lara Solis" loading="lazy"/>
+            <div class="thx-card__body">
+              <div class="thx-card__name">Lara Solis</div>
+              <span class="thx-card__creds">MSW/RSW</span>
+              <span class="thx-card__role">Associate Therapist</span>
+              <p class="thx-card__spec">Individuals (16+)</p>
+              <div class="thx-card__avail">Mon 3 PM – 9 PM · Sun 10 AM – 5 PM</div>
+            </div>
+          </a>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="/#intake-form" class="btn btn-teal">Fill Out Our Intake Form</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+.thx-card__creds{font-size:.7rem;font-weight:600;letter-spacing:.08em;color:var(--mid);display:block;margin-bottom:.15rem}
+</style>

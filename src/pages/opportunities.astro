@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Therapist Career Opportunities | West End Therapy Winnipeg" description="Join the West End Therapy team in Winnipeg. We are hiring Associate Therapists — MMFT, MSW, CCC and EMDR-trained welcome.">
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Career Opportunities</h1>
+      <p>Join a supportive, collaborative team of passionate therapists in Winnipeg.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap opp-wrap">
+      <div class="opp-main">
+        <div class="job-card">
+          <div class="job-badge">Currently Hiring</div>
+          <h2>Associate Therapist — EMDR Therapy</h2>
+          <p class="job-type">Independent Contractor · Part-time or Full-time · In-Person & Online</p>
+          <p>West End Therapy is a private, fee-for-service therapy practice located at 759 Wall Street, Winnipeg. We provide individual, couple, and family therapy via in-person and online sessions. We are looking to expand our team with therapists who are passionate and enthusiastic about what they do.</p>
+          <h3>About the Role</h3>
+          <p>Associate Therapists are self-employed as Independent Contractors and work with a high degree of independence. All client referrals are provided through West End Therapy intake, and the infrastructure is in place to begin working with clients immediately upon employment. Associate Therapists have scheduled weekly office hours, with part-time and full-time hours available. Associate Therapists may concurrently be employed with another agency or maintain their own private practice.</p>
+          <h3>Qualifications</h3>
+          <ul class="check-list">
+            <li>Master's Degree in Marriage & Family Therapy (MMFT), Social Work (MSW), Counselling Psychology (MA/MACP), or equivalent</li>
+            <li>Registered or eligible for registration with applicable Manitoba professional body (MCSW, CACFT, CCPA, etc.)</li>
+            <li>EMDR training (Basic or Advanced) is an asset</li>
+            <li>Experience with trauma-informed approaches</li>
+            <li>Strong clinical skills and commitment to ongoing professional development</li>
+            <li>Comfortable working independently and collaboratively</li>
+          </ul>
+          <h3>What We Offer</h3>
+          <ul class="check-list">
+            <li>Competitive fee-for-service compensation</li>
+            <li>Fully furnished, professional office space at 759 Wall St</li>
+            <li>Secure online platform for virtual sessions</li>
+            <li>Client referrals provided through our intake system</li>
+            <li>Collegial, supportive team environment</li>
+            <li>Flexible scheduling</li>
+          </ul>
+          <div class="job-apply">
+            <h3>How to Apply</h3>
+            <p>To apply, please send your CV and a brief cover letter to:</p>
+            <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-teal">inquiries@westendtherapy.ca</a>
+          </div>
+        </div>
+        <div class="job-card">
+          <div class="job-badge">Currently Hiring</div>
+          <h2>Associate Therapist — General Practice</h2>
+          <p class="job-type">Independent Contractor · Part-time or Full-time · In-Person & Online</p>
+          <p>We are also seeking Associate Therapists with experience working with individuals, couples, and/or families. Whether you specialize in a particular population or approach, we welcome applications from therapists who are dedicated to providing high-quality, compassionate care.</p>
+          <div class="job-apply">
+            <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-teal">Apply Now</a>
+            <a href="/contact" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <aside class="opp-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Apply Today</h3>
+          <p>Send your CV and cover letter to our team.</p>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Email Your Application</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="font-size:.85rem;margin-top:.5rem;">759 Wall St<br>Winnipeg, MB R3G 2T6</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}.page-hero p{max-width:55ch;font-size:1.05rem}
+.opp-wrap{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.opp-wrap{grid-template-columns:1fr}}
+.opp-main{display:flex;flex-direction:column;gap:2rem}
+.job-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:2rem}
+.job-badge{display:inline-block;background:var(--teal);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;border-radius:3px;margin-bottom:1rem}
+.job-card h2{font-size:1.5rem;margin-bottom:.25rem}
+.job-type{font-size:.82rem;font-weight:600;color:var(--teal);margin-bottom:1.25rem;display:block}
+.job-card p{font-size:.95rem;line-height:1.75;color:var(--dark);margin-bottom:1rem}
+.job-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin:1.5rem 0 .75rem;color:var(--black)}
+.check-list{display:grid;gap:.5rem;margin-bottom:1rem}
+.check-list li{padding:.35rem .75rem .35rem 2rem;position:relative;font-size:.92rem;color:var(--dark)}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.job-apply{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.job-apply h3{width:100%;margin:0 0 .5rem}
+.opp-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+</style>

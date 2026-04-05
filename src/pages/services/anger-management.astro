@@ -1,0 +1,131 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const heroImg = "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg";
+---
+<Layout title="Anger Management in Winnipeg | West End Therapy" description="Anger management therapy in Winnipeg. Evidence-based counselling to understand the roots of anger and develop healthier emotional responses at West End Therapy.">
+
+  <section class="svc-hero" style={`background-image:url('${heroImg}')`}>
+    <div class="svc-hero__overlay"></div>
+    <div class="wrap svc-hero__content">
+      <p class="eyebrow">Understand anger and build healthier responses</p>
+      <h1>Anger Management in Winnipeg</h1>
+      <div class="hero-btns">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap svc-layout">
+      <div class="svc-main">
+
+        <div class="svc-intro">
+          <p>Anger is a normal, healthy emotion — but when it becomes frequent, intense, or hard to control, it can damage relationships, careers, and overall wellbeing. At West End Therapy, we offer anger management therapy that goes beyond simply "controlling" your temper to help you understand what is driving your anger and develop more constructive ways of expressing and responding to it.</p>
+      <p>Our therapists take a compassionate, non-judgmental approach to working with anger. We understand that anger is often a signal of unmet needs, underlying pain, or past experiences that deserve attention.</p>
+        </div>
+
+        <div class="svc-block">
+          <h2>Issues We Help Address</h2>
+          <ul class="check-list">
+            <li>Frequent or intense anger responses that feel out of proportion</li>
+            <li>Difficulty controlling angry outbursts</li>
+            <li>Anger that damages relationships at home or work</li>
+            <li>Road rage or situational anger</li>
+            <li>Anger related to trauma or past experiences</li>
+            <li>Passive-aggressive patterns or difficulty expressing anger assertively</li>
+            <li>Anger associated with depression, anxiety, or grief</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>Our Therapeutic Approaches</h2>
+          <ul class="approach-list">
+            <li>Cognitive Behavioural Therapy (CBT)</li>
+            <li>Emotion-focused approaches</li>
+            <li>Mindfulness-based strategies</li>
+            <li>Communication and assertiveness skills</li>
+            <li>Trauma-informed therapy</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>What to Expect</h2>
+          <p>Your therapist will begin by helping you understand your anger — its triggers, patterns, and underlying causes. You'll learn practical skills for recognizing warning signs, taking space when needed, and expressing yourself in ways that honour both your feelings and your relationships.</p>
+      <p>Many clients find that addressing the emotional roots of their anger leads to not only better anger management, but also greater self-awareness, improved relationships, and reduced stress overall.</p>
+        </div>
+
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Get Started?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with the right therapist.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;">Email Us</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact Us</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="margin-top:.6rem;font-size:.85rem;">759 Wall St<br>Winnipeg, MB R3G 2T6</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <ul class="sidebar-links">
+            <li><a href="/services/individual-therapy">Individual Therapy</a></li>
+            <li><a href="/services/couples-therapy">Couples Therapy</a></li>
+            <li><a href="/services/family-therapy">Family Therapy</a></li>
+            <li><a href="/services/child-therapy">Child &amp; Teen Therapy</a></li>
+            <li><a href="/services/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/services/anxiety-therapy">Anxiety Therapy</a></li>
+            <li><a href="/services/depression-therapy">Depression Therapy</a></li>
+            <li><a href="/services/sex-therapy">Sex Therapy</a></li>
+            <li><a href="/services/play-therapy">Play Therapy</a></li>
+            <li><a href="/services/anger-management">Anger Management</a></li>
+            <li><a href="/services/grief-therapy">Grief Counselling</a></li>
+            <li><a href="/services/online-therapy">Online Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:680px">
+      <h2>Take the First Step Today</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Our team of Master's-level therapists is here to support you. Fill out our intake form and we'll get back to you within 24 hours.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our 2-Minute Intake Form</a>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.svc-hero{min-height:420px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}
+.svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 100%)}
+.svc-hero__content{position:relative;z-index:1;padding-block:clamp(3rem,8vw,5rem)}
+.svc-hero__content h1{color:#fff;font-size:clamp(1.8rem,5vw,3rem);margin-block:.5rem 1.5rem;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);display:block;margin-bottom:.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.svc-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.svc-layout{grid-template-columns:1fr}}
+.svc-intro p{font-size:1.05rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.svc-block{margin-top:2.5rem}
+.svc-block h2{font-size:1.5rem;margin-bottom:1rem;color:var(--black)}
+.svc-block p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.approach-list{display:grid;gap:.5rem}
+.approach-list li{padding:.4rem .75rem .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--dark)}
+.approach-list li::before{content:'→';position:absolute;left:.25rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem;color:var(--black)}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links li::before{display:none}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

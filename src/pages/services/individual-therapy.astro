@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const heroImg = "https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg";
+---
+<Layout title="Individual Therapy in Winnipeg | West End Therapy" description="Individual therapy in Winnipeg for adults 16+. Compassionate, evidence-based counselling for anxiety, trauma, depression, relationships and more.">
+
+  <section class="svc-hero" style={`background-image:url('${heroImg}')`}>
+    <div class="svc-hero__overlay"></div>
+    <div class="wrap svc-hero__content">
+      <p class="eyebrow">One-on-one support tailored to you</p>
+      <h1>Individual Therapy in Winnipeg</h1>
+      <div class="hero-btns">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap svc-layout">
+      <div class="svc-main">
+
+        <div class="svc-intro">
+          <p>Individual Therapy is typically offered to those aged 16 and over. At West End Therapy, we aim to create a safe space that is inclusive and supportive of individuals of diverse backgrounds, identities and ways of thinking.</p>
+      <p>Our therapists are experienced in supporting individuals facing a wide range of issues. Whether you're navigating a difficult time or seeking personal development, we'll help you find the right therapist for your needs.</p>
+        </div>
+
+        <div class="svc-block">
+          <h2>Issues We Help Address</h2>
+          <ul class="check-list">
+            <li>Managing stress and difficult emotions</li>
+            <li>Experiencing ambivalence, strain or loss in intimate relationships</li>
+            <li>Grief and loss</li>
+            <li>The effects of trauma, complex trauma, or intergenerational trauma</li>
+            <li>Navigating setting and maintaining boundaries in relationships</li>
+            <li>Living with neuro-divergence</li>
+            <li>Mental health issues (mood disorders, anxiety, personality disorder)</li>
+            <li>Substance use and behavioural addictions</li>
+            <li>Life transitions and adjusting to different phases of the life cycle</li>
+            <li>Struggles with identity and/or sense of self</li>
+            <li>Issues related to attachment style, including sensitivity to rejection or avoidance of emotional intimacy</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>Our Therapeutic Approaches</h2>
+          <ul class="approach-list">
+            <li>Emotionally Focused Therapy (EFT)</li>
+            <li>Cognitive Behavioural Therapy (CBT)</li>
+            <li>Dialectical Behaviour Therapy (DBT)</li>
+            <li>EMDR (Eye Movement Desensitization and Reprocessing)</li>
+            <li>Narrative Therapy</li>
+            <li>Mindfulness-Based Approaches</li>
+            <li>Internal Family Systems (IFS)</li>
+            <li>Attachment-Based Therapy</li>
+          </ul>
+        </div>
+
+        <div class="svc-block">
+          <h2>What to Expect</h2>
+          <p>Your first session is an opportunity to share what brings you to therapy in a relaxed, non-judgmental setting. Your therapist will listen carefully and begin to understand your situation, your goals, and what kind of support would be most helpful. Together, you'll develop a plan that honours your pace and priorities.</p>
+      <p>All sessions are available in-person at our Winnipeg clinic or online across Manitoba.</p>
+        </div>
+
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Get Started?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with the right therapist.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;">Email Us</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact Us</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="margin-top:.6rem;font-size:.85rem;">759 Wall St<br>Winnipeg, MB R3G 2T6</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <ul class="sidebar-links">
+            <li><a href="/services/individual-therapy">Individual Therapy</a></li>
+            <li><a href="/services/couples-therapy">Couples Therapy</a></li>
+            <li><a href="/services/family-therapy">Family Therapy</a></li>
+            <li><a href="/services/child-therapy">Child &amp; Teen Therapy</a></li>
+            <li><a href="/services/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/services/anxiety-therapy">Anxiety Therapy</a></li>
+            <li><a href="/services/depression-therapy">Depression Therapy</a></li>
+            <li><a href="/services/sex-therapy">Sex Therapy</a></li>
+            <li><a href="/services/play-therapy">Play Therapy</a></li>
+            <li><a href="/services/anger-management">Anger Management</a></li>
+            <li><a href="/services/grief-therapy">Grief Counselling</a></li>
+            <li><a href="/services/online-therapy">Online Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:680px">
+      <h2>Take the First Step Today</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Our team of Master's-level therapists is here to support you. Fill out our intake form and we'll get back to you within 24 hours.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our 2-Minute Intake Form</a>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.svc-hero{min-height:420px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}
+.svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 100%)}
+.svc-hero__content{position:relative;z-index:1;padding-block:clamp(3rem,8vw,5rem)}
+.svc-hero__content h1{color:#fff;font-size:clamp(1.8rem,5vw,3rem);margin-block:.5rem 1.5rem;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);display:block;margin-bottom:.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.svc-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.svc-layout{grid-template-columns:1fr}}
+.svc-intro p{font-size:1.05rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.svc-block{margin-top:2.5rem}
+.svc-block h2{font-size:1.5rem;margin-bottom:1rem;color:var(--black)}
+.svc-block p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.approach-list{display:grid;gap:.5rem}
+.approach-list li{padding:.4rem .75rem .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--dark)}
+.approach-list li::before{content:'→';position:absolute;left:.25rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem;color:var(--black)}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links li::before{display:none}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

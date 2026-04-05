@@ -1,0 +1,62 @@
+---
+const LOGO = 'https://westendtherapy.ca/ws/media-library/5806fd793bd8491daa08742a7fe79f35/wet-logo-final-standard-size-circle.png';
+const nav = [
+  { label:'Home', href:'/' },
+  { label:'Our Therapists', href:'/therapists' },
+  { label:'Services', href:'/services' },
+  { label:'About Us', href:'/about' },
+  { label:'Blog', href:'/blog' },
+  { label:'Opportunities', href:'/opportunities' },
+  { label:'Contact Us', href:'/contact' },
+];
+const { pathname } = Astro.url;
+---
+<header class="site-header">
+  <div class="hdr-inner wrap">
+    <a href="/" class="hdr-logo">
+      <img src={LOGO} alt="West End Therapy" width="72" height="72"/>
+    </a>
+    <nav class="hdr-nav" aria-label="Main navigation">
+      {nav.map(n => (
+        <a href={n.href} class:list={['hdr-link', { active: pathname === n.href || (n.href !== '/' && pathname.startsWith(n.href)) }]}>
+          {n.label}
+        </a>
+      ))}
+    </nav>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="ham-btn">
+      <span/><span/><span/>
+    </button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  {nav.map(n => <a href={n.href} class="mob-link">{n.label}</a>)}
+</nav>
+<style>
+.site-header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+.hdr-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:var(--header-h,90px)}
+.hdr-logo img{width:72px;height:72px;object-fit:contain;border-radius:50%;display:block}
+.hdr-logo{flex-shrink:0}
+.hdr-nav{display:flex;align-items:center;gap:.25rem}
+.hdr-link{font-family:var(--font-b);font-size:.82rem;font-weight:600;letter-spacing:.04em;color:var(--teal);padding:.35rem .6rem;border-radius:3px;transition:background var(--t),color var(--t)}
+.hdr-link:hover,.hdr-link.active{background:var(--teal-pale);color:var(--teal-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem;border-radius:3px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--teal);border-radius:2px;transition:transform .2s,opacity .2s}
+.mobile-nav{display:none;position:fixed;top:90px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:1rem;z-index:99;box-shadow:0 6px 20px rgba(0,0,0,.08);flex-direction:column;gap:.3rem}
+.mobile-nav.open{display:flex}
+.mob-link{font-size:.95rem;font-weight:600;color:var(--teal);padding:.6rem .75rem;border-radius:3px;transition:background var(--t)}
+.mob-link:hover{background:var(--teal-pale)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){.hdr-nav{display:none}.hamburger{display:flex}}
+</style>
+<script>
+const btn=document.getElementById('ham-btn');
+const nav=document.getElementById('mobile-nav');
+btn?.addEventListener('click',()=>{
+  const open=btn.classList.toggle('open');
+  nav?.classList.toggle('open');
+  btn.setAttribute('aria-expanded',String(open));
+  nav?.setAttribute('aria-hidden',String(!open));
+});
+</script>

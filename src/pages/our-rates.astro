@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Therapy Rates Winnipeg | West End Therapy" description="Therapy session rates at West End Therapy in Winnipeg. Individual, couples, family, child, and EMDR therapy fees.">
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Our Rates</h1>
+      <p>Transparent, competitive pricing for all therapy services at West End Therapy.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap rates-wrap">
+      <div class="rates-grid">
+        <div class="rate-card">
+          <div class="rate-card__icon">👤</div>
+          <h2>Individual Therapy</h2>
+          <p class="rate-label">Age 16 and up</p>
+          <p class="rate-length">Typical session length: 50–60 minutes<br><em>60–90 minutes for EMDR</em></p>
+          <ul class="rate-list">
+            <li><span>50-minute session</span><strong>$125 – $145</strong></li>
+            <li><span>60-minute session</span><strong>$135 – $180</strong></li>
+          </ul>
+          <p class="rate-note">Please contact us for further details.</p>
+        </div>
+        <div class="rate-card">
+          <div class="rate-card__icon">💑</div>
+          <h2>Relational Therapy</h2>
+          <p class="rate-label">Couples & Families</p>
+          <p class="rate-length">Typical session length: 60–70 minutes</p>
+          <ul class="rate-list">
+            <li><span>50–60 minute session</span><strong>$145 – $180</strong></li>
+            <li><span>70-minute session</span><strong>$165 – $185</strong></li>
+          </ul>
+          <p class="rate-note">Please contact us for further details.</p>
+        </div>
+        <div class="rate-card">
+          <div class="rate-card__icon">🧸</div>
+          <h2>Child & Adolescent Therapy</h2>
+          <p class="rate-label">Play-Based Therapy</p>
+          <p class="rate-length">Typical session length: 50 minutes</p>
+          <ul class="rate-list">
+            <li><span>Per session</span><strong>$145 – $180</strong></li>
+          </ul>
+          <p class="rate-note">Please contact us for further details.</p>
+        </div>
+      </div>
+      <div class="insurance-note">
+        <h2>Insurance & Coverage</h2>
+        <p>Many extended health benefit plans include coverage for therapy with registered therapists. We recommend contacting your insurance provider to confirm your coverage before your first session.</p>
+        <p>We accept the following insurance plans:</p>
+        <ul class="ins-list">
+          <li>Manitoba Blue Cross</li><li>Canada Life</li><li>SunLife</li>
+          <li>Medavie Blue Cross (RCMP & non-RCMP)</li>
+          <li>Treaty Status / First Nations & Inuit Health Branch (NIHB)</li>
+        </ul>
+        <p style="margin-top:1rem;"><strong>Note:</strong> We do not currently offer direct billing. We provide a receipt after each session for you to submit to your insurance provider.</p>
+        <div style="margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;">
+          <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+          <a href="/faq" class="btn btn-outline">Read Our FAQ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}.page-hero p{max-width:55ch;font-size:1.05rem}
+.rates-wrap{max-width:900px}
+.rates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem}
+@media(max-width:780px){.rates-grid{grid-template-columns:1fr}}
+.rate-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:2rem;display:flex;flex-direction:column;gap:.5rem}
+.rate-card__icon{font-size:2rem;margin-bottom:.25rem}
+.rate-card h2{font-size:1.3rem;margin:0}
+.rate-label{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.rate-length{font-size:.88rem;color:var(--mid);line-height:1.5;margin-top:.25rem}
+.rate-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem}
+.rate-list li{display:flex;justify-content:space-between;align-items:center;font-size:.9rem}
+.rate-list span{color:var(--mid)}
+.rate-list strong{color:var(--black);font-weight:700}
+.rate-note{font-size:.82rem;color:var(--mid);margin-top:.5rem;font-style:italic}
+.insurance-note{background:var(--teal-pale);border-radius:8px;padding:2rem;border:1px solid var(--border)}
+.insurance-note h2{margin-bottom:1rem}
+.insurance-note p{font-size:.97rem;line-height:1.75;margin-bottom:.75rem;color:var(--dark)}
+.ins-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.4rem;margin:.75rem 0}
+.ins-list li{font-size:.9rem;color:var(--dark);padding-left:1.25rem;position:relative}
+.ins-list li::before{content:'✓';position:absolute;left:0;color:var(--teal);font-weight:700}
+@media(max-width:500px){.ins-list{grid-template-columns:1fr}}
+</style>

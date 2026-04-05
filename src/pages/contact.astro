@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Contact Us" description="Contact West End Therapy in Winnipeg. Book a session or reach us at 204-809-9114.">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Contact Us</h1>
+      <p>Ready to take the first step? Reach out and we'll match you with the right therapist.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 style="margin-bottom:1.5rem;">Get in Touch</h2>
+        <form netlify name="contact">
+          <div class="form-group"><label>Name *</label><input type="text" name="name" required placeholder="Your name"/></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="your@email.com"/></div>
+          <div class="form-group"><label>Phone</label><input type="tel" name="phone" placeholder="204-555-0100"/></div>
+          <div class="form-group"><label>Message</label><textarea name="message" placeholder="How can we help?"></textarea></div>
+          <button type="submit" class="btn btn-teal" style="width:100%;justify-content:center;">Send Message</button>
+        </form>
+      </div>
+      <aside class="contact-info">
+        <div class="info-block">
+          <h3>Visit Us</h3>
+          <p>759 Wall St<br>Winnipeg, MB R3G 2T6</p>
+          <a href="https://maps.app.goo.gl/8cHBVMuQ6hXhFEZKA" target="_blank" rel="noopener" class="btn btn-outline mt1" style="font-size:.72rem;">View on Google Maps</a>
+        </div>
+        <div class="info-block">
+          <h3>Call or Email</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+        </div>
+        <div class="info-block">
+          <h3>Crisis Resources</h3>
+          <p style="font-size:.85rem;">If you are in immediate danger, call <strong>911</strong>.</p>
+          <p style="font-size:.85rem;">Manitoba Crisis Line: <a href="tel:18883223019">1-888-322-3019</a> (24/7)</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</Layout>
+<style>
+.page-hero{background:linear-gradient(135deg,var(--teal-light),var(--teal-pale));padding-block:clamp(3rem,7vw,5rem);border-bottom:1px solid var(--border)}
+.page-hero h1{margin-block:.5rem .75rem}
+.page-hero p{max-width:55ch;font-size:1.05rem}
+.contact-grid{display:grid;grid-template-columns:1fr 340px;gap:4rem;align-items:start}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.info-block{background:var(--teal-pale);border-radius:4px;padding:1.5rem;margin-bottom:1.25rem}
+.info-block h3{font-size:1rem;font-family:var(--font-b);font-weight:700;color:var(--black);margin-bottom:.6rem}
+.info-block p{font-size:.9rem}
+.info-block a{color:var(--teal)}
+</style>

@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+const heroImg = 'https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg';
+---
+<Layout title="OCD Therapy Winnipeg | Obsessive-Compulsive Disorder | West End Therapy" description="OCD therapy in Winnipeg. Evidence-based treatment for Obsessive-Compulsive Disorder including ERP and CBT at West End Therapy.">
+  <section class="svc-hero" style={`background-image:url('${heroImg}')`}>
+    <div class="svc-hero__overlay"></div>
+    <div class="wrap svc-hero__content">
+      <p class="eyebrow">Evidence-based support for OCD</p>
+      <h1>OCD Therapy in Winnipeg</h1>
+      <div class="hero-btns">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap svc-layout">
+      <div class="svc-main">
+        <div class="svc-intro"><p>Obsessive-Compulsive Disorder (OCD) is a mental health condition characterized by unwanted, intrusive thoughts (obsessions) and repetitive behaviours or mental acts (compulsions) performed to reduce distress. OCD can be consuming and deeply disruptive to daily life, relationships, and sense of self.</p>
+        <p>At West End Therapy, our therapists provide evidence-based treatment for OCD in a compassionate, non-judgmental environment. You are not your intrusive thoughts, and effective help is available.</p></div>
+        <div class="svc-block"><h2>Issues We Help Address</h2><ul class="check-list"><li>Intrusive, unwanted thoughts or mental images</li>
+            <li>Compulsive rituals (checking, cleaning, ordering, counting)</li>
+            <li>Mental compulsions (reassurance-seeking, mental reviewing)</li>
+            <li>Contamination OCD</li>
+            <li>Harm OCD and unwanted violent thoughts</li>
+            <li>Religious or moral scrupulosity OCD</li>
+            <li>Relationship OCD (ROCD)</li>
+            <li>OCD related to health anxiety or illness</li>
+            <li>Pure-O (primarily obsessional) OCD</li></ul></div>
+        <div class="svc-block"><h2>Our Therapeutic Approaches</h2><ul class="approach-list"><li>Exposure and Response Prevention (ERP) — gold-standard OCD treatment</li>
+            <li>Cognitive Behavioural Therapy (CBT)</li>
+            <li>Acceptance and Commitment Therapy (ACT)</li>
+            <li>Inference-Based CBT (I-CBT)</li>
+            <li>Mindfulness-based strategies</li></ul></div>
+        <div class="svc-block"><h2>What to Expect</h2><p>Effective OCD treatment typically involves Exposure and Response Prevention (ERP), where you gradually face feared situations while refraining from compulsive responses. Your therapist will explain this process carefully and ensure you feel supported throughout. ERP can feel challenging, but research consistently shows it is highly effective for OCD.</p></div>
+        
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Get Started?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with the right therapist.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;">Email Us</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="font-size:.85rem;margin-top:.5rem;">759 Wall St, Winnipeg MB R3G 2T6</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <ul class="sidebar-links">
+            <li><a href="/individual-therapy">Individual Therapy</a></li>
+            <li><a href="/couples-therapy">Couples Therapy</a></li>
+            <li><a href="/family-therapy">Family Therapy</a></li>
+            <li><a href="/child-therapy">Child &amp; Teen Therapy</a></li>
+            <li><a href="/therapy-for-teens">Therapy for Teens</a></li>
+            <li><a href="/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/trauma-therapy">Trauma Therapy</a></li>
+            <li><a href="/anxiety-therapy">Anxiety Therapy</a></li>
+            <li><a href="/depression-therapy">Depression Therapy</a></li>
+            <li><a href="/divorce-counselling">Divorce Counselling</a></li>
+            <li><a href="/stress-and-burnout-therapy">Stress &amp; Burnout</a></li>
+            <li><a href="/anger-management">Anger Management</a></li>
+            <li><a href="/play-therapy">Play Therapy</a></li>
+            <li><a href="/sex-therapy">Sex Therapy</a></li>
+            <li><a href="/online-therapy">Online Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:680px">
+      <h2>Take the First Step Today</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Our team of Master's-level therapists is here to support you. Fill out our intake form and we'll get back to you within 24 hours.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our 2-Minute Intake Form</a>
+    </div>
+  </section>
+</Layout>
+<style>
+.svc-hero{min-height:420px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}
+.svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 100%)}
+.svc-hero__content{position:relative;z-index:1;padding-block:clamp(3rem,8vw,5rem)}
+.svc-hero__content h1{color:#fff;font-size:clamp(1.8rem,5vw,3rem);margin-block:.5rem 1.5rem;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);display:block;margin-bottom:.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.svc-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.svc-layout{grid-template-columns:1fr}}
+.svc-intro p{font-size:1.05rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.svc-block{margin-top:2.5rem}.svc-block h2{font-size:1.5rem;margin-bottom:1rem}
+.svc-block p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list,.approach-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.approach-list li{padding:.4rem .75rem .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--dark)}
+.approach-list li::before{content:'→';position:absolute;left:.25rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>

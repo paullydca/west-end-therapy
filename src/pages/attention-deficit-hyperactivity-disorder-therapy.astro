@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+const heroImg = 'https://westendtherapy.ca/ws/media-library/26789bddcacb0b17f2a56440eb68713d/adobestock_436729956.jpeg';
+---
+<Layout title="ADHD Therapy Winnipeg | Counselling for Attention & Focus | West End Therapy" description="ADHD therapy in Winnipeg for children, teens, and adults. Practical, compassionate support for attention, focus, and emotional regulation at West End Therapy.">
+  <section class="svc-hero" style={`background-image:url('${heroImg}')`}>
+    <div class="svc-hero__overlay"></div>
+    <div class="wrap svc-hero__content">
+      <p class="eyebrow">Practical support for attention and focus</p>
+      <h1>ADHD Therapy in Winnipeg</h1>
+      <div class="hero-btns">
+        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-ghost">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap svc-layout">
+      <div class="svc-main">
+        <div class="svc-intro"><p>Attention Deficit Hyperactivity Disorder (ADHD) affects how people pay attention, control impulses, and manage activity levels. ADHD can present differently across the lifespan — what looks like hyperactivity in a child may show up as chronic disorganization, difficulty completing tasks, or emotional dysregulation in an adult.</p>
+        <p>At West End Therapy, we offer compassionate, practical support for children, teens, and adults living with ADHD. Therapy does not replace medication, but it can be a powerful complement — helping you or your child develop strategies, build strengths, and thrive.</p></div>
+        <div class="svc-block"><h2>Issues We Help Address</h2><ul class="check-list"><li>Difficulty sustaining attention and completing tasks</li>
+            <li>Impulsivity and difficulty waiting</li>
+            <li>Disorganization and time management struggles</li>
+            <li>Emotional dysregulation and frustration</li>
+            <li>Low self-esteem related to ADHD challenges</li>
+            <li>Relationship difficulties linked to ADHD patterns</li>
+            <li>School or work performance concerns</li>
+            <li>Co-occurring anxiety or depression</li>
+            <li>Parent support for children with ADHD</li></ul></div>
+        <div class="svc-block"><h2>Our Therapeutic Approaches</h2><ul class="approach-list"><li>Cognitive Behavioural Therapy (CBT) adapted for ADHD</li>
+            <li>Executive functioning coaching and skill-building</li>
+            <li>Mindfulness-based approaches</li>
+            <li>Parent coaching and behaviour management strategies</li>
+            <li>Emotionally focused approaches for self-esteem and relationships</li></ul></div>
+        <div class="svc-block"><h2>What to Expect</h2><p>Your therapist will work collaboratively with you to identify specific challenges and develop practical, individualized strategies. For children, we may also work with parents to support the whole family system. Therapy is focused on building skills and confidence, not just managing symptoms.</p></div>
+        
+      </div>
+      <aside class="svc-sidebar">
+        <div class="sidebar-card cta-card">
+          <h3>Ready to Get Started?</h3>
+          <p>Fill out our 2-minute intake form and we'll match you with the right therapist.</p>
+          <a href="/#intake-form" class="btn btn-teal" style="width:100%;justify-content:center;margin-top:1rem;">Book a Session</a>
+          <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:.75rem;">Email Us</a>
+        </div>
+        <div class="sidebar-card">
+          <h3>Contact</h3>
+          <p><a href="tel:+12048099114">(204) 809-9114</a></p>
+          <p><a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
+          <p style="font-size:.85rem;margin-top:.5rem;">759 Wall St, Winnipeg MB R3G 2T6</p>
+        </div>
+        <div class="sidebar-card">
+          <h3>All Services</h3>
+          <ul class="sidebar-links">
+            <li><a href="/individual-therapy">Individual Therapy</a></li>
+            <li><a href="/couples-therapy">Couples Therapy</a></li>
+            <li><a href="/family-therapy">Family Therapy</a></li>
+            <li><a href="/child-therapy">Child &amp; Teen Therapy</a></li>
+            <li><a href="/therapy-for-teens">Therapy for Teens</a></li>
+            <li><a href="/emdr-therapy">EMDR Therapy</a></li>
+            <li><a href="/trauma-therapy">Trauma Therapy</a></li>
+            <li><a href="/anxiety-therapy">Anxiety Therapy</a></li>
+            <li><a href="/depression-therapy">Depression Therapy</a></li>
+            <li><a href="/divorce-counselling">Divorce Counselling</a></li>
+            <li><a href="/stress-and-burnout-therapy">Stress &amp; Burnout</a></li>
+            <li><a href="/anger-management">Anger Management</a></li>
+            <li><a href="/play-therapy">Play Therapy</a></li>
+            <li><a href="/sex-therapy">Sex Therapy</a></li>
+            <li><a href="/online-therapy">Online Therapy</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section pale tc">
+    <div class="wrap" style="max-width:680px">
+      <h2>Take the First Step Today</h2>
+      <p style="margin-top:1rem;margin-bottom:2rem;">Our team of Master's-level therapists is here to support you. Fill out our intake form and we'll get back to you within 24 hours.</p>
+      <a href="/#intake-form" class="btn btn-teal">Fill Out Our 2-Minute Intake Form</a>
+    </div>
+  </section>
+</Layout>
+<style>
+.svc-hero{min-height:420px;background-size:cover;background-position:center;position:relative;display:flex;align-items:center}
+.svc-hero__overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(0,0,0,.55) 0%,rgba(0,0,0,.25) 100%)}
+.svc-hero__content{position:relative;z-index:1;padding-block:clamp(3rem,8vw,5rem)}
+.svc-hero__content h1{color:#fff;font-size:clamp(1.8rem,5vw,3rem);margin-block:.5rem 1.5rem;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);display:block;margin-bottom:.5rem}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem}
+.svc-layout{display:grid;grid-template-columns:1fr 300px;gap:4rem;align-items:start}
+@media(max-width:900px){.svc-layout{grid-template-columns:1fr}}
+.svc-intro p{font-size:1.05rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.svc-block{margin-top:2.5rem}.svc-block h2{font-size:1.5rem;margin-bottom:1rem}
+.svc-block p{font-size:.97rem;line-height:1.8;margin-bottom:1rem;color:var(--dark)}
+.check-list,.approach-list{display:grid;gap:.5rem}
+.check-list li{padding:.4rem .75rem .4rem 2rem;position:relative;font-size:.92rem;color:var(--dark);line-height:1.6}
+.check-list li::before{content:'✓';position:absolute;left:.5rem;color:var(--teal);font-weight:700}
+.approach-list li{padding:.4rem .75rem .4rem 1.5rem;position:relative;font-size:.92rem;color:var(--dark)}
+.approach-list li::before{content:'→';position:absolute;left:.25rem;color:var(--teal);font-weight:700}
+.svc-sidebar{display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--teal-pale);border-radius:6px;padding:1.5rem;border:1px solid var(--border)}
+.cta-card{background:var(--teal-light)}
+.sidebar-card h3{font-size:1rem;font-family:var(--font-b);font-weight:700;margin-bottom:.75rem}
+.sidebar-card p{font-size:.88rem;line-height:1.6;margin-bottom:.25rem}
+.sidebar-card a:not(.btn){color:var(--teal)}
+.sidebar-links{display:grid;gap:.35rem}
+.sidebar-links a{font-size:.88rem;color:var(--teal);font-weight:500}
+.sidebar-links a:hover{color:var(--teal-dark);text-decoration:underline}
+</style>
