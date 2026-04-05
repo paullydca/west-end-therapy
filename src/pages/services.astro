@@ -30,7 +30,7 @@ const services = [
     <div class="wrap">
       <div class="svc-grid">
         {services.map(s => (
-          <a href={'/services/' + s.slug} class="svc-card">
+          <a href={'/west-end-therapy/services/' + s.slug} class="svc-card">
             <img src={IMG_BASE + '/' + s.img} alt={s.name} loading="lazy"/>
             <div class="svc-card__body">
               <span class="svc-card__name">{s.name}</span>
@@ -47,9 +47,9 @@ const services = [
     <div class="wrap" style="max-width:700px">
       <h2>Not sure which service is right for you?</h2>
       <p style="margin-top:1rem;margin-bottom:2rem;">Fill out our 2-minute intake form and we'll match you with the right therapist and service for your unique needs.</p>
-      <a href="/#intake-form" class="btn btn-teal">Fill Out Our Intake Form</a>
+      <a href="/west-end-therapy/#intake-form" class="btn btn-teal">Fill Out Our Intake Form</a>
       &ensp;
-      <a href="/therapists" class="btn btn-outline">Meet Our Therapists</a>
+      <a href="/west-end-therapy/therapists" class="btn btn-outline">Meet Our Therapists</a>
     </div>
   </section>
 

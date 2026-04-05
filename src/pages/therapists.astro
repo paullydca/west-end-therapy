@@ -334,7 +334,7 @@ const therapists = [
       <p style="margin-bottom:2rem;">Click on a photo for the full bio. Please note some therapists have waiting lists.</p>
       <div class="thx-grid">
         {therapists.map(t => (
-          <a href={'/therapists/' + t.slug} class="thx-card">
+          <a href={'/west-end-therapy/therapists/' + t.slug} class="thx-card">
             <img src={IMG_BASE + '/' + t.img} alt={t.name} loading="lazy"/>
             <div class="thx-card__body">
               <div class="thx-card__name">{t.name}</div>
@@ -354,7 +354,7 @@ const therapists = [
       <h2>All of our therapists have <em>Master's-Level training</em> and are professional members of their respective professional body in Manitoba.</h2>
       <p style="max-width:60ch;margin-inline:auto;margin-top:1rem;">West End Therapy is committed to creating a welcoming, inclusive space for people of all identities, backgrounds, and lived experiences.</p>
       <div style="margin-top:2rem;">
-        <a href="/#intake-form" class="btn btn-teal">Book a Session</a>
+        <a href="/west-end-therapy/#intake-form" class="btn btn-teal">Book a Session</a>
         &ensp;
         <a href="mailto:inquiries@westendtherapy.ca" class="btn btn-outline">Email Us</a>
       </div>

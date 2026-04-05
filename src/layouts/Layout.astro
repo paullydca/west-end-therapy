@@ -2,7 +2,6 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const base = import.meta.env.BASE_URL;
 interface Props { title: string; description?: string; }
 const { title, description = 'West End Therapy offers counselling and therapy in Winnipeg for individuals, couples, and families.' } = Astro.props;
 ---
@@ -16,7 +15,7 @@ const { title, description = 'West End Therapy offers counselling and therapy in
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link rel="icon" href={base + "favicon.svg"} type="image/svg+xml"/>
+<link rel="icon" href="/west-end-therapy/favicon.svg" type="image/svg+xml"/>
 </head>
 <body>
 <Header/>
