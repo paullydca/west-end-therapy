@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 const LOGO = 'https://westendtherapy.ca/ws/media-library/43b07bc5ac6c5215507cc1e8a9d0f441/wet-logo-final-standard-size-circle.png';
 const services = [
   ['Anger Management','/anger-management'],['Couple Therapy','/couples-therapy'],
@@ -12,7 +13,7 @@ const services = [
 <footer class="site-footer">
   <div class="wrap ftr-grid">
     <div class="ftr-col ftr-about">
-      <a href="/"><img src={LOGO} alt="West End Therapy" class="ftr-logo"/></a>
+      <a href={base}><img src={LOGO} alt="West End Therapy" class="ftr-logo"/></a>
       <p>Locally owned since 2020, we provide expert therapy and mental health services at <a href="https://maps.app.goo.gl/8cHBVMuQ6hXhFEZKA" target="_blank" rel="noopener">759 Wall St, Winnipeg</a>. Specializing in individual, couples, family, and child therapy.</p>
       <div class="ftr-contact">
         <p><strong>Email:</strong> <a href="mailto:inquiries@westendtherapy.ca">inquiries@westendtherapy.ca</a></p>
@@ -37,14 +38,14 @@ const services = [
     <div class="ftr-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/therapists">Our Therapists</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/opportunities">Opportunities</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        <li><a href="/terms-of-service">Terms of Service</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
+        <li><a href={base}>Home</a></li>
+        <li><a href={base + "therapists"}>Our Therapists</a></li>
+        <li><a href={base + "about"}>About Us</a></li>
+        <li><a href={base + "blog"}>Blog</a></li>
+        <li><a href={base + "opportunities"}>Opportunities</a></li>
+        <li><a href={base + "contact"}>Contact Us</a></li>
+        <li><a href={base + "terms-of-service"}>Terms of Service</a></li>
+        <li><a href={base + "privacy-policy"}>Privacy Policy</a></li>
       </ul>
     </div>
   </div>
